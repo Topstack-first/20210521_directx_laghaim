@@ -1,0 +1,1441 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="KP_Debug_Game|Win32">
+      <Configuration>KP_Debug_Game</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="KP_Release_Game|Win32">
+      <Configuration>KP_Release_Game</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="TH_Debug_Game|Win32">
+      <Configuration>TH_Debug_Game</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="TH_Release_Game|Win32">
+      <Configuration>TH_Release_Game</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>Laghaim_Client</ProjectName>
+    <ProjectGuid>{F57A6098-F6EA-4E30-AA7F-DB943861C9AA}</ProjectGuid>
+    <RootNamespace>Laghaim_NewUI</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='TH_Debug_Game|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <UseOfAtl>Dynamic</UseOfAtl>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='TH_Release_Game|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='KP_Debug_Game|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <UseOfAtl>Dynamic</UseOfAtl>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='KP_Release_Game|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v100</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='TH_Debug_Game|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='TH_Release_Game|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='KP_Debug_Game|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='KP_Release_Game|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='KP_Release_Game|Win32'">bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='KP_Release_Game|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='KP_Release_Game|Win32'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='KP_Debug_Game|Win32'">bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='KP_Debug_Game|Win32'">$(Configuration)\</IntDir>
+    <ExtensionsToDeleteOnClean Condition="'$(Configuration)|$(Platform)'=='KP_Debug_Game|Win32'">*.obj%3b*.ilk%3b*.pdb%3b*.tlb%3b*.tli%3b*.tlh%3b*.tmp%3b*.rsp%3b*.bat%3b$(OutDir)</ExtensionsToDeleteOnClean>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='KP_Debug_Game|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='TH_Release_Game|Win32'">bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='TH_Release_Game|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='TH_Release_Game|Win32'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='TH_Debug_Game|Win32'">bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='TH_Debug_Game|Win32'">$(Configuration)\</IntDir>
+    <ExtensionsToDeleteOnClean Condition="'$(Configuration)|$(Platform)'=='TH_Debug_Game|Win32'">*.obj%3b*.ilk%3b*.pdb%3b*.tlb%3b*.tli%3b*.tlh%3b*.tmp%3b*.rsp%3b*.bat%3b$(OutDir)</ExtensionsToDeleteOnClean>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='TH_Debug_Game|Win32'">true</LinkIncremental>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='KP_Debug_Game|Win32'">$(Configuration)</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='KP_Release_Game|Win32'">$(Configuration)</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='TH_Debug_Game|Win32'">$(Configuration)</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='TH_Release_Game|Win32'">$(Configuration)</TargetName>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='KP_Release_Game|Win32'">MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis Condition="'$(Configuration)|$(Platform)'=='KP_Release_Game|Win32'">false</RunCodeAnalysis>
+    <CodeAnalysisIgnoreGeneratedCode Condition="'$(Configuration)|$(Platform)'=='KP_Release_Game|Win32'">true</CodeAnalysisIgnoreGeneratedCode>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='KP_Release_Game|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>C:\local\boost_1_64_0;..\Laghaim_Engine\header;../DXSDK/Include;../common;.\Game\$(OutDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRTBLD;WIN32;_WINDOWS;_KOR_CLIENT_;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(OutDir)</AssemblerListingLocation>
+      <ObjectFileName>$(OutDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(OutDir)</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <EnablePREfast>false</EnablePREfast>
+      <OmitFramePointers>false</OmitFramePointers>
+      <EnableFiberSafeOptimizations>false</EnableFiberSafeOptimizations>
+      <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>NkEnginePack.lib;ijl11.lib;odbc32.lib;odbccp32.lib;VoiceyoLib.lib;dxguid.lib;ddraw.lib;winmm.lib;ws2_32.lib;dsound.lib;imm32.lib;strmiids.lib;gdiplus.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>bin\$(Configuration).exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>C:\local\boost_1_64_0\lib32-msvc-10.0;..\Laghaim_Engine\lib;../DXSDK/Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>libcd.lib;libc.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AssemblyDebug>true</AssemblyDebug>
+      <ProgramDatabaseFile>$(IntDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapFileName>$(IntDir)$(TargetName).map</MapFileName>
+      <MapExports>true</MapExports>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>false</OptimizeReferences>
+      <TargetMachine>MachineX86</TargetMachine>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Release/Laghaim.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0412</Culture>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='KP_Debug_Game|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>C:\local\boost_1_64_0;..\Laghaim_Engine\header;../DXSDK/Include;../common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRTBLD;WIN32;_WINDOWS;_KOR_CLIENT_;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <FunctionLevelLinking>
+      </FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(OutDir)</AssemblerListingLocation>
+      <ObjectFileName>$(OutDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(OutDir)</ProgramDataBaseFileName>
+      <BrowseInformation>
+      </BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>libcmtd.lib;NkEngineDPack.lib;ijl11.lib;dxguid.lib;ddraw.lib;winmm.lib;ws2_32.lib;dsound.lib;imm32.lib;strmiids.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>bin\$(Configuration).exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>C:\local\boost_1_64_0\lib32-msvc-10.0;..\Laghaim_Engine\lib;../DXSDK/Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>MSVCPRTD.LIB;libcd.lib;libc.lib;nafxcwd.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AssemblyDebug>true</AssemblyDebug>
+      <ProgramDatabaseFile>$(IntDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapFileName>$(IntDir)$(TargetName).map</MapFileName>
+      <MapExports>true</MapExports>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+      <IgnoreAllDefaultLibraries>
+      </IgnoreAllDefaultLibraries>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Debug/Laghaim.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0412</Culture>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='TH_Release_Game|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>..\Laghaim_Engine\header;../DXSDK/Include;../Common;.\Game\$(OutDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRTBLD;WIN32;_WINDOWS;_TH_CLIENT_;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(OutDir)</AssemblerListingLocation>
+      <ObjectFileName>$(OutDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(OutDir)</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>NkEnginePack.lib;ijl11.lib;odbc32.lib;odbccp32.lib;VoiceyoLib.lib;dxguid.lib;ddraw.lib;winmm.lib;ws2_32.lib;dsound.lib;imm32.lib;strmiids.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>bin\$(Configuration).exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>..\Laghaim_Engine\lib;../DXSDK/Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>libcd.lib;libc.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AssemblyDebug>true</AssemblyDebug>
+      <ProgramDatabaseFile>$(IntDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapFileName>$(IntDir)$(TargetName).map</MapFileName>
+      <MapExports>true</MapExports>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>false</OptimizeReferences>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Release/Laghaim.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0412</Culture>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='TH_Debug_Game|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\Laghaim_Engine\header;../DXSDK/Include;../Common;.\Game\$(OutDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRTBLD;WIN32;_WINDOWS;_TH_CLIENT_;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(OutDir)</AssemblerListingLocation>
+      <ObjectFileName>$(OutDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(OutDir)</ProgramDataBaseFileName>
+      <BrowseInformation>
+      </BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>NkEngineDPack.lib;ijl11.lib;odbc32.lib;odbccp32.lib;VoiceyoLib.lib;dxguid.lib;ddraw.lib;winmm.lib;ws2_32.lib;dsound.lib;imm32.lib;strmiids.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>bin\$(Configuration).exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>..\Laghaim_Engine\lib;../DXSDK/Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>libcd.lib;libc.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AssemblyDebug>true</AssemblyDebug>
+      <ProgramDatabaseFile>$(IntDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapFileName>$(IntDir)$(TargetName).map</MapFileName>
+      <MapExports>true</MapExports>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Debug/Laghaim.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0412</Culture>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="2DResMgr.cpp" />
+    <ClCompile Include="3d_PosPoint.cpp" />
+    <ClCompile Include="AlphaPopUp.cpp" />
+    <ClCompile Include="AutoMouse.cpp" />
+    <ClCompile Include="AutoNotice.cpp" />
+    <ClCompile Include="BaseballManager.cpp" />
+    <ClCompile Include="BaseballRewardManager.cpp" />
+    <ClCompile Include="baseTgaWindow.cpp" />
+    <ClCompile Include="BaseUI.cpp" />
+    <ClCompile Include="basewindow.cpp" />
+    <ClCompile Include="basicbutton.cpp" />
+    <ClCompile Include="BasicMenu.cpp" />
+    <ClCompile Include="BasicStatic.cpp" />
+    <ClCompile Include="BattleStart.cpp" />
+    <ClCompile Include="BingoManager.cpp" />
+    <ClCompile Include="BuffItemMgr.cpp" />
+    <ClCompile Include="ChaAct.cpp" />
+    <ClCompile Include="ChangeHair.cpp" />
+    <ClCompile Include="ChatUtilMgr.cpp" />
+    <ClCompile Include="CheckBox.cpp" />
+    <ClCompile Include="CheckButton.cpp" />
+    <ClCompile Include="CloudSea.cpp" />
+    <ClCompile Include="ClrAlloc.cpp" />
+    <ClCompile Include="Cmd.cpp" />
+    <ClCompile Include="ComboBox.cpp" />
+    <ClCompile Include="CommonConfig.cpp" />
+    <ClCompile Include="Compas.cpp" />
+    <ClCompile Include="ControlBaseball.cpp" />
+    <ClCompile Include="ControlBaseballReward.cpp" />
+    <ClCompile Include="ControlBingo.cpp" />
+    <ClCompile Include="ControlBottom.cpp" />
+    <ClCompile Include="ControlCashShop.cpp" />
+    <ClCompile Include="ControlDecardiBattle.cpp" />
+    <ClCompile Include="ControlDiceGame.cpp" />
+    <ClCompile Include="ControlDiceGameReward.cpp" />
+    <ClCompile Include="ControlDocument.cpp" />
+    <ClCompile Include="ControlExchange.cpp" />
+    <ClCompile Include="ControlFishing.cpp" />
+    <ClCompile Include="ControlFishingReward.cpp" />
+    <ClCompile Include="ControlGate.cpp" />
+    <ClCompile Include="ControlGroup.cpp" />
+    <ClCompile Include="ControlHelp.cpp" />
+    <ClCompile Include="ControlHelper.cpp" />
+    <ClCompile Include="ControlHelpPet.cpp" />
+    <ClCompile Include="ControlInven.cpp" />
+    <ClCompile Include="ControlLetter.cpp" />
+    <ClCompile Include="ControlLetterRecv.cpp" />
+    <ClCompile Include="ControlLetterSend.cpp" />
+    <ClCompile Include="ControlLetterWindow.cpp" />
+    <ClCompile Include="ControlLottery.cpp" />
+    <ClCompile Include="ControlLotto.cpp" />
+    <ClCompile Include="ControlLowGuildMaster.cpp" />
+    <ClCompile Include="ControlMap.cpp" />
+    <ClCompile Include="ControlNotice.cpp" />
+    <ClCompile Include="ControlParty.cpp" />
+    <ClCompile Include="ControlPeiceShop.cpp" />
+    <ClCompile Include="ControlPetKeep.cpp" />
+    <ClCompile Include="ControlPetShop.cpp" />
+    <ClCompile Include="ControlPetShop2.cpp" />
+    <ClCompile Include="ControlPetStatus.cpp" />
+    <ClCompile Include="ControlPopupMenu.cpp" />
+    <ClCompile Include="ControlRoyale.cpp" />
+    <ClCompile Include="ControlScore.cpp" />
+    <ClCompile Include="ControlSelectMenu.cpp" />
+    <ClCompile Include="ControlShop.cpp" />
+    <ClCompile Include="ControlSkill.cpp" />
+    <ClCompile Include="ControlSocial.cpp" />
+    <ClCompile Include="ControlStatus.cpp" />
+    <ClCompile Include="ControlTeleportItem.cpp" />
+    <ClCompile Include="ControlTop.cpp" />
+    <ClCompile Include="ControlUpgrade.cpp" />
+    <ClCompile Include="ControlUserShop.cpp" />
+    <ClCompile Include="ControlWareHouse.cpp" />
+    <ClCompile Include="ControlYutboard.cpp" />
+    <ClCompile Include="CParticle.cpp" />
+    <ClCompile Include="CParticleSystem.cpp" />
+    <ClCompile Include="createcharacterpage.cpp" />
+    <ClCompile Include="CsyManager.cpp" />
+    <ClCompile Include="DataFriend.cpp" />
+    <ClCompile Include="DecardiBattleManager.cpp" />
+    <ClCompile Include="DecoObj.cpp" />
+    <ClCompile Include="DefenseValMgr.cpp" />
+    <ClCompile Include="DiceGameManager.cpp" />
+    <ClCompile Include="DiceGameRewardManager.cpp" />
+    <ClCompile Include="Dirtsnd.cpp" />
+    <ClCompile Include="DMusicMgr.cpp" />
+    <ClCompile Include="DragBox.cpp" />
+    <ClCompile Include="DragProgress.cpp" />
+    <ClCompile Include="DropStar.cpp" />
+    <ClCompile Include="EventOnOffMgr.cpp" />
+    <ClCompile Include="Event_Ancient.cpp" />
+    <ClCompile Include="event_family.cpp" />
+    <ClCompile Include="EventLegKnockAppear.cpp" />
+    <ClCompile Include="EventScript.cpp" />
+    <ClCompile Include="EventScriptActor.cpp" />
+    <ClCompile Include="ExtraButton.cpp" />
+    <ClCompile Include="FactoryPattern.cpp" />
+    <ClCompile Include="Filtering.cpp" />
+    <ClCompile Include="FireFly.cpp" />
+    <ClCompile Include="FishingManager.cpp" />
+    <ClCompile Include="FishingRewardManager.cpp" />
+    <ClCompile Include="FxBalloonKill.cpp" />
+    <ClCompile Include="FxCommonLolo.cpp" />
+    <ClCompile Include="FxLv400Effect.cpp" />
+    <ClCompile Include="g_ImageManager.cpp" />
+    <ClCompile Include="g_LogMaker.cpp" />
+    <ClCompile Include="g_stringmanager.cpp" />
+    <ClCompile Include="Gamble.cpp" />
+    <ClCompile Include="GoodShadow.cpp" />
+    <ClCompile Include="GuardTower.cpp" />
+    <ClCompile Include="GuildHunt.cpp" />
+    <ClCompile Include="GuildPK.cpp" />
+    <ClCompile Include="GuildWar.cpp" />
+    <ClCompile Include="GUtil.cpp" />
+    <ClCompile Include="HanIme.cpp" />
+    <ClCompile Include="HappyNewYear.cpp" />
+    <ClCompile Include="HellDown_Circle.cpp" />
+    <ClCompile Include="Help.cpp" />
+    <ClCompile Include="HelpScript.cpp" />
+    <ClCompile Include="Interchange.cpp" />
+    <ClCompile Include="InterFileConnection.cpp" />
+    <ClCompile Include="Item.cpp" />
+    <ClCompile Include="ItemFakeOptionMgr.cpp" />
+    <ClCompile Include="ItemInfoScaleMgr.cpp" />
+    <ClCompile Include="ItemOutlineMgr.cpp" />
+    <ClCompile Include="ItemProto.cpp" />
+    <ClCompile Include="ItemRender.cpp" />
+    <ClCompile Include="LetterManager.cpp" />
+    <ClCompile Include="LoloManager.cpp" />
+    <ClCompile Include="LotteryManager.cpp" />
+    <ClCompile Include="LottoManager.cpp" />
+    <ClCompile Include="L_MultiEditBox.cpp" />
+    <ClCompile Include="L_SkillBox.cpp" />
+    <ClCompile Include="LandDemo.cpp" />
+    <ClCompile Include="LdDecoObj.cpp" />
+    <ClCompile Include="LetterBox.cpp" />
+    <ClCompile Include="LetterFriend.cpp" />
+    <ClCompile Include="LetterList.cpp" />
+    <ClCompile Include="LetterReject.cpp" />
+    <ClCompile Include="LetterSend.cpp" />
+    <ClCompile Include="LetterView.cpp" />
+    <ClCompile Include="LevelDownManager.cpp" />
+    <ClCompile Include="LH_SelectCharacterPage.cpp" />
+    <ClCompile Include="LHGlobal_String.cpp" />
+    <ClCompile Include="LHOverInfo.cpp" />
+    <ClCompile Include="LHParam_Manager.cpp" />
+    <ClCompile Include="LHRenderTarget_Character.cpp" />
+    <ClCompile Include="LHTable_Manager.cpp" />
+    <ClCompile Include="LHTextChecker.cpp" />
+    <ClCompile Include="LHUI_Base.cpp" />
+    <ClCompile Include="LHUI_Captcha.cpp" />
+    <ClCompile Include="LHUI_CashShop.cpp" />
+    <ClCompile Include="LHUI_Gate.cpp" />
+    <ClCompile Include="LHUI_OpEvent.cpp" />
+    <ClCompile Include="LHUI_SeccondAuth.cpp" />
+    <ClCompile Include="LHUI_TakeBox.cpp" />
+    <ClCompile Include="LHUI_TItleSystem.cpp" />
+    <ClCompile Include="LHUtil_Text.cpp" />
+    <ClCompile Include="LightCtrl.cpp" />
+    <ClCompile Include="ListBox.cpp" />
+    <ClCompile Include="LoadEffectSound.cpp" />
+    <ClCompile Include="LockSmith.cpp" />
+    <ClCompile Include="LoginDlg.cpp" />
+    <ClCompile Include="loginpage.cpp" />
+    <ClCompile Include="LogoPage.cpp" />
+    <ClCompile Include="LShiftMenu.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="MakeAccPage.cpp" />
+    <ClCompile Include="MatBattleUI.cpp" />
+    <ClCompile Include="matlist.cpp" />
+    <ClCompile Include="MatMakeRoom.cpp" />
+    <ClCompile Include="MatSurvivalUI.cpp" />
+    <ClCompile Include="Mouse.cpp" />
+    <ClCompile Include="Mp3module.cpp" />
+    <ClCompile Include="MsgPopUp.cpp" />
+    <ClCompile Include="multilistbox.cpp" />
+    <ClCompile Include="Netsock.cpp" />
+    <ClCompile Include="NewListBox.cpp" />
+    <ClCompile Include="Nk2DFrame.cpp" />
+    <ClCompile Include="NkCharacter.cpp" />
+    <ClCompile Include="NkKeyboard.cpp" />
+    <ClCompile Include="NkMob.cpp" />
+    <ClCompile Include="NkMyPet.cpp" />
+    <ClCompile Include="NKObjQuadNode.cpp" />
+    <ClCompile Include="NkPet.cpp" />
+    <ClCompile Include="NoticeList.cpp" />
+    <ClCompile Include="NoticeView.cpp" />
+    <ClCompile Include="NoWhisper.cpp" />
+    <ClCompile Include="ObjectList.cpp" />
+    <ClCompile Include="OneSelfInfo.cpp" />
+    <ClCompile Include="OptionPg.cpp" />
+    <ClCompile Include="PacketProc.cpp" />
+    <ClCompile Include="PacketRecv_Friend.cpp" />
+    <ClCompile Include="PacketSend.cpp" />
+    <ClCompile Include="PasswordCheck.cpp" />
+    <ClCompile Include="Path.cpp" />
+    <ClCompile Include="pet_level.cpp" />
+    <ClCompile Include="PetProduct.cpp" />
+    <ClCompile Include="PlaceInfo.cpp" />
+    <ClCompile Include="platinum.cpp" />
+    <ClCompile Include="Process.cpp" />
+    <ClCompile Include="Product.cpp" />
+    <ClCompile Include="ProgressBox.cpp" />
+    <ClCompile Include="PVPWidget.cpp" />
+    <ClCompile Include="QlistBox.cpp" />
+    <ClCompile Include="QuestData.cpp" />
+    <ClCompile Include="RecvPacketMgr.cpp" />
+    <ClCompile Include="rnpacket.cpp" />
+    <ClCompile Include="R_SkillBox.cpp" />
+    <ClCompile Include="Refine.cpp" />
+    <ClCompile Include="ReservationWindow.cpp" />
+    <ClCompile Include="RShiftMenu.cpp" />
+    <ClCompile Include="ScriptActFunc.cpp" />
+    <ClCompile Include="Scroll.cpp" />
+    <ClCompile Include="ScrollBox.cpp" />
+    <ClCompile Include="SEED_256_KISA.cpp" />
+    <ClCompile Include="selectcharacterpage.cpp" />
+    <ClCompile Include="SetItemEffMgr.cpp" />
+    <ClCompile Include="setvaluepage.cpp" />
+    <ClCompile Include="SFXBaseShpae.cpp" />
+    <ClCompile Include="sfxUtil.cpp" />
+    <ClCompile Include="ShadowRect.cpp" />
+    <ClCompile Include="sheet.cpp" />
+    <ClCompile Include="ShoutChatMgr.cpp" />
+    <ClCompile Include="SkillExtendManager.cpp" />
+    <ClCompile Include="SkyPlane.cpp" />
+    <ClCompile Include="Slider.cpp" />
+    <ClCompile Include="SMRender.cpp" />
+    <ClCompile Include="SpecialItem.cpp" />
+    <ClCompile Include="SpeedCheck.cpp" />
+    <ClCompile Include="SpinBox.cpp" />
+    <ClCompile Include="SpiritMode.cpp" />
+    <ClCompile Include="SplashWnd.cpp" />
+    <ClCompile Include="Sprite.cpp" />
+    <ClCompile Include="startpage.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='KP_Debug_Game|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='KP_Release_Game|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='TH_Debug_Game|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='TH_Release_Game|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="SummerEvent.cpp" />
+    <ClCompile Include="Tcpipcon.cpp" />
+    <ClCompile Include="TcpUtil.cpp" />
+    <ClCompile Include="TextBoard.cpp" />
+    <ClCompile Include="TextBox.cpp" />
+    <ClCompile Include="TextList.cpp" />
+    <ClCompile Include="TextOutBox.cpp" />
+    <ClCompile Include="UIFriend.cpp" />
+    <ClCompile Include="UIFriendDenyList.cpp" />
+    <ClCompile Include="UIFriendDenyListPopupMenu.cpp" />
+    <ClCompile Include="UIFriendLine.cpp" />
+    <ClCompile Include="UIFriendList.cpp" />
+    <ClCompile Include="UIFriendListPopupMenu.cpp" />
+    <ClCompile Include="UIFriendList_Base.cpp" />
+    <ClCompile Include="UIMgr.cpp" />
+    <ClCompile Include="UI_AnimLolo.cpp" />
+    <ClCompile Include="UI_BuffItem.cpp" />
+    <ClCompile Include="UI_GmMacro.cpp" />
+    <ClCompile Include="WarInfo.cpp" />
+    <ClCompile Include="WarRequest.cpp" />
+    <ClCompile Include="WarTax.cpp" />
+    <ClCompile Include="WeatherMgr.cpp" />
+    <ClCompile Include="WebCtrl.cpp" />
+    <ClCompile Include="WebWorld.cpp" />
+    <ClCompile Include="window_resource.cpp" />
+    <ClCompile Include="WindowMgr.cpp" />
+    <ClCompile Include="WorldCupStart.cpp" />
+    <ClCompile Include="YutManager.cpp" />
+    <ClCompile Include="AutoPlay_test_Ex.cpp" />
+    <ClCompile Include="DevTestGmCommand.cpp" />
+    <ClCompile Include="HackProcessMgr.cpp" />
+    <ClCompile Include="LH_Decal.cpp" />
+    <ClCompile Include="PingTest.cpp" />
+    <ClCompile Include="ControlGuildBattle.cpp" />
+    <ClCompile Include="ControlGuildM.cpp" />
+    <ClCompile Include="ControlGuildSHouse.cpp" />
+    <ClCompile Include="ControlGuildT.cpp" />
+    <ClCompile Include="guild_battle.cpp" />
+    <ClCompile Include="guild_data.cpp" />
+    <ClCompile Include="guild_mark.cpp" />
+    <ClCompile Include="guild_member_notice.cpp" />
+    <ClCompile Include="guild_memberpage.cpp" />
+    <ClCompile Include="guild_nonmemberpage.cpp" />
+    <ClCompile Include="guild_promotion.cpp" />
+    <ClCompile Include="guild_search.cpp" />
+    <ClCompile Include="s_grade_control.cpp" />
+    <ClCompile Include="s_guild_func.cpp" />
+    <ClCompile Include="s_guild_manager.cpp" />
+    <ClCompile Include="s_Job_control.cpp" />
+    <ClCompile Include="s_joinrequest_control.cpp" />
+    <ClCompile Include="s_member_control.cpp" />
+    <ClCompile Include="s_notice_control.cpp" />
+    <ClCompile Include="wanted_data.cpp" />
+    <ClCompile Include="wanted_list.cpp" />
+    <ClCompile Include="wanted_my_menu.cpp" />
+    <ClCompile Include="wanted_network_func.cpp" />
+    <ClCompile Include="wanted_register.cpp" />
+    <ClCompile Include="wanted_start_page.cpp" />
+    <ClCompile Include="DmitronBattle.cpp" />
+    <ClCompile Include="DmitronBattleStatus.cpp" />
+    <ClCompile Include="DmitronBattleTax.cpp" />
+    <ClCompile Include="FxSet.cpp" />
+    <ClCompile Include="Skill.cpp" />
+    <ClCompile Include="FxAdrenaline.cpp" />
+    <ClCompile Include="FxAidiaFire.cpp" />
+    <ClCompile Include="FxAirRaid.cpp" />
+    <ClCompile Include="FxArupakaSpit.cpp" />
+    <ClCompile Include="FxAssault.cpp" />
+    <ClCompile Include="FxAttack_Capsyong.cpp" />
+    <ClCompile Include="FxAttackFixLolo.cpp" />
+    <ClCompile Include="FxAttackMoveLolo.cpp" />
+    <ClCompile Include="FxAutoLaser.cpp" />
+    <ClCompile Include="FxBabysoul.cpp" />
+    <ClCompile Include="FxBash.cpp" />
+    <ClCompile Include="FxBee.cpp" />
+    <ClCompile Include="FxBeeBoom.cpp" />
+    <ClCompile Include="FxBlackHole.cpp" />
+    <ClCompile Include="FxBleed.cpp" />
+    <ClCompile Include="FxBora.cpp" />
+    <ClCompile Include="FxBoraBoom.cpp" />
+    <ClCompile Include="FxCasting.cpp" />
+    <ClCompile Include="FxCatchFlag.cpp" />
+    <ClCompile Include="FxCatchFlagDir.cpp" />
+    <ClCompile Include="FxChain.cpp" />
+    <ClCompile Include="FxChakram.cpp" />
+    <ClCompile Include="FxChaos.cpp" />
+    <ClCompile Include="FxChargeCannon.cpp" />
+    <ClCompile Include="FxCharWave.cpp" />
+    <ClCompile Include="FxConditionEffects.cpp" />
+    <ClCompile Include="FxControlLight.cpp" />
+    <ClCompile Include="FxDeathWaveAim.cpp" />
+    <ClCompile Include="FxDemiCrusher.cpp" />
+    <ClCompile Include="FxDmitronEffects.cpp" />
+    <ClCompile Include="FxDragonEffects.cpp" />
+    <ClCompile Include="FxDrillStone.cpp" />
+    <ClCompile Include="FxDropBasin.cpp" />
+    <ClCompile Include="FxDropCandy.cpp" />
+    <ClCompile Include="FxDropDaruma.cpp" />
+    <ClCompile Include="FxDropSword.cpp" />
+    <ClCompile Include="FxDSlash.cpp" />
+    <ClCompile Include="FxDstone.cpp" />
+    <ClCompile Include="FxDStoneEff.cpp" />
+    <ClCompile Include="FxDurant.cpp" />
+    <ClCompile Include="FxDurantTarget.cpp" />
+    <ClCompile Include="FxEarthQuake.cpp" />
+    <ClCompile Include="FxEatEffects.cpp" />
+    <ClCompile Include="FxElectricHammer.cpp" />
+    <ClCompile Include="FxFallOffStone.cpp" />
+    <ClCompile Include="FxFireBoomShort.cpp" />
+    <ClCompile Include="FxFireParticle.cpp" />
+    <ClCompile Include="FxFireTower.cpp" />
+    <ClCompile Include="FxFireWorks.cpp" />
+    <ClCompile Include="FxFlame.cpp" />
+    <ClCompile Include="FxFlameSpear.cpp" />
+    <ClCompile Include="FxFly.cpp" />
+    <ClCompile Include="FxFlyingCrash.cpp" />
+    <ClCompile Include="FxFlyingCrash2.cpp" />
+    <ClCompile Include="FxFollow.cpp" />
+    <ClCompile Include="FxFreePvpRing.cpp" />
+    <ClCompile Include="FxFrost.cpp" />
+    <ClCompile Include="FxGatheringGun.cpp" />
+    <ClCompile Include="FxGhostHunt.cpp" />
+    <ClCompile Include="FxGhostRise.cpp" />
+    <ClCompile Include="FxGreenSmoke.cpp" />
+    <ClCompile Include="FxGuardTower.cpp" />
+    <ClCompile Include="FxHealEffects.cpp" />
+    <ClCompile Include="FxHellCry.cpp" />
+    <ClCompile Include="FxHellDown_Around.cpp" />
+    <ClCompile Include="FxHellDown_Circle2.cpp" />
+    <ClCompile Include="FxHellDown_Lightly.cpp" />
+    <ClCompile Include="FxHellDown_Lightning.cpp" />
+    <ClCompile Include="FxHellDown_Spark.cpp" />
+    <ClCompile Include="FxHitBoomEffects.cpp" />
+    <ClCompile Include="FxHitEffects.cpp" />
+    <ClCompile Include="FxHitPetEffects.cpp" />
+    <ClCompile Include="FxHitPowerEffects.cpp" />
+    <ClCompile Include="FxHorn.cpp" />
+    <ClCompile Include="FxHornBoom.cpp" />
+    <ClCompile Include="FxIceBlot.cpp" />
+    <ClCompile Include="FxKhanHitEffects.cpp" />
+    <ClCompile Include="FxLevelUp.cpp" />
+    <ClCompile Include="FxLifeCommon.cpp" />
+    <ClCompile Include="FxLifeExpansion.cpp" />
+    <ClCompile Include="FxLifeLight.cpp" />
+    <ClCompile Include="FxLightBallBoomNew.cpp" />
+    <ClCompile Include="FxLightHeal.cpp" />
+    <ClCompile Include="FxLightParticle.cpp" />
+    <ClCompile Include="FxMagicArrow.cpp" />
+    <ClCompile Include="FxMagicLaser.cpp" />
+    <ClCompile Include="FxMagicSword.cpp" />
+    <ClCompile Include="FxMercernerySlash.cpp" />
+    <ClCompile Include="FxMeteor.cpp" />
+    <ClCompile Include="FxMeteorite.cpp" />
+    <ClCompile Include="FxMeteoriteBoom.cpp" />
+    <ClCompile Include="FxMine.cpp" />
+    <ClCompile Include="FxMobParticle.cpp" />
+    <ClCompile Include="FxMobShowUp.cpp" />
+    <ClCompile Include="FxMoth.cpp" />
+    <ClCompile Include="FxMuramasa.cpp" />
+    <ClCompile Include="FxMusicalNote.cpp" />
+    <ClCompile Include="FxNuclearAim.cpp" />
+    <ClCompile Include="FxNuclearBoom.cpp" />
+    <ClCompile Include="FxOnOffEffects.cpp" />
+    <ClCompile Include="FxOptionSkillEffects.cpp" />
+    <ClCompile Include="FxParticle.cpp" />
+    <ClCompile Include="FxPebbleShot.cpp" />
+    <ClCompile Include="FxPetSkill.cpp" />
+    <ClCompile Include="FxPoison.cpp" />
+    <ClCompile Include="FxPoisonFog.cpp" />
+    <ClCompile Include="FxPowerUp.cpp" />
+    <ClCompile Include="FxProtectionShield.cpp" />
+    <ClCompile Include="FxRandomFire.cpp" />
+    <ClCompile Include="FxRandomShoot.cpp" />
+    <ClCompile Include="FxRedFire.cpp" />
+    <ClCompile Include="FxReflection.cpp" />
+    <ClCompile Include="FxRegenBar.cpp" />
+    <ClCompile Include="FxRegenStart.cpp" />
+    <ClCompile Include="FxResurrection.cpp" />
+    <ClCompile Include="FxRocket.cpp" />
+    <ClCompile Include="FxRunSmoke.cpp" />
+    <ClCompile Include="FxScanView.cpp" />
+    <ClCompile Include="FxScrollDamage.cpp" />
+    <ClCompile Include="FxScrollLight.cpp" />
+    <ClCompile Include="FxScrollRing.cpp" />
+    <ClCompile Include="FxShadowSlash.cpp" />
+    <ClCompile Include="FxShadowSlash2.cpp" />
+    <ClCompile Include="FxShield.cpp" />
+    <ClCompile Include="FxShieldBlock.cpp" />
+    <ClCompile Include="FxShilon.cpp" />
+    <ClCompile Include="FxShilonMaster.cpp" />
+    <ClCompile Include="FxShockSpear.cpp" />
+    <ClCompile Include="FxShoot.cpp" />
+    <ClCompile Include="FxShootAttacked.cpp" />
+    <ClCompile Include="FxShowUp2.cpp" />
+    <ClCompile Include="FxSiren.cpp" />
+    <ClCompile Include="FxSkillLight.cpp" />
+    <ClCompile Include="FxSmokeParticle.cpp" />
+    <ClCompile Include="FxSoulDust.cpp" />
+    <ClCompile Include="FxSpaceSlash.cpp" />
+    <ClCompile Include="FxSpeedUpSmoke.cpp" />
+    <ClCompile Include="FxSpiritMode.cpp" />
+    <ClCompile Include="FxSpiritMode2.cpp" />
+    <ClCompile Include="FxSprayParticle.cpp" />
+    <ClCompile Include="FxStarFlare.cpp" />
+    <ClCompile Include="FxStoneBrust.cpp" />
+    <ClCompile Include="FxStoneRance.cpp" />
+    <ClCompile Include="FxStoneRance2.cpp" />
+    <ClCompile Include="FxStoneShot.cpp" />
+    <ClCompile Include="FxSummonFire.cpp" />
+    <ClCompile Include="FxSummonFireBoom.cpp" />
+    <ClCompile Include="FxSummonSquad.cpp" />
+    <ClCompile Include="FxSumPart.cpp" />
+    <ClCompile Include="FxTeleport.cpp" />
+    <ClCompile Include="FxTLVertex.cpp" />
+    <ClCompile Include="FxTornadoHammer.cpp" />
+    <ClCompile Include="FxTornadoRuin.cpp" />
+    <ClCompile Include="FxTurnParticle.cpp" />
+    <ClCompile Include="FxVampire.cpp" />
+    <ClCompile Include="FxVampireAttack.cpp" />
+    <ClCompile Include="FxWarGiantAttack.cpp" />
+    <ClCompile Include="FxWarGiantDie.cpp" />
+    <ClCompile Include="FxWarGiantMulti.cpp" />
+    <ClCompile Include="FxWaterSprinkle.cpp" />
+    <ClCompile Include="FxWaterSprinkleBoom.cpp" />
+    <ClCompile Include="FxWeaponEffects.cpp" />
+    <ClCompile Include="FxWildSmash.cpp" />
+    <ClCompile Include="FxWorldCup.cpp" />
+    <ClCompile Include="FxWorldCupBoom.cpp" />
+    <ClCompile Include="Fx_BossRaid_Aidia1_01.cpp" />
+    <ClCompile Include="Fx_BossRaid_Aidia1_02.cpp" />
+    <ClCompile Include="Fx_BossRaid_Aidia1_02_Shockwave.cpp" />
+    <ClCompile Include="FX_BossRaid_Aidia2_01.cpp" />
+    <ClCompile Include="FX_BossRaid_Aidia2_02.cpp" />
+    <ClCompile Include="FX_BossRaid_Aidia2_03.cpp" />
+    <ClCompile Include="Fx_BossRaid_Aidia3_01.cpp" />
+    <ClCompile Include="Fx_BossRaid_Aidia3_02.cpp" />
+    <ClCompile Include="Fx_BossRaid_bulkan1_02.cpp" />
+    <ClCompile Include="Fx_BossRaid_Bulkan1_03.cpp" />
+    <ClCompile Include="Fx_BossRaid_bulkan2_02.cpp" />
+    <ClCompile Include="Fx_BossRaid_bulkan3_02.cpp" />
+    <ClCompile Include="Fx_BossRaid_bulkan3_03.cpp" />
+    <ClCompile Include="Fx_BossRaid_Human1_02.cpp" />
+    <ClCompile Include="Fx_BossRaid_Human1_03.cpp" />
+    <ClCompile Include="Fx_BossRaid_human2_02.cpp" />
+    <ClCompile Include="Fx_BossRaid_human2_03.cpp" />
+    <ClCompile Include="Fx_BossRaid_Human3_02.cpp" />
+    <ClCompile Include="Fx_BossRaid_Hybri1_01.cpp" />
+    <ClCompile Include="Fx_BossRaid_Hybri1_02.cpp" />
+    <ClCompile Include="Fx_BossRaid_Hybri2_02.cpp" />
+    <ClCompile Include="Fx_BossRaid_Hybri3_01.cpp" />
+    <ClCompile Include="Fx_BossRaid_Hybri3_02.cpp" />
+    <ClCompile Include="Fx_BossRaid_Kai1_01.cpp" />
+    <ClCompile Include="Fx_BossRaid_Kai1_02.cpp" />
+    <ClCompile Include="Fx_BossRaid_Kai2_01.cpp" />
+    <ClCompile Include="Fx_BossRaid_Kai2_02.cpp" />
+    <ClCompile Include="Fx_BossRaid_Kai2_03.cpp" />
+    <ClCompile Include="Fx_BossRaid_Kai3_01.cpp" />
+    <ClCompile Include="Fx_BossRaid_Kai3_02.cpp" />
+    <ClCompile Include="Fx_BossRaid_Kai3_03.cpp" />
+    <ClCompile Include="Fx_BossRaid_LastBoss_02.cpp" />
+    <ClCompile Include="Fx_BossRaid_LastBoss_03.cpp" />
+    <ClCompile Include="Fx_BossRaid_LastBoss_04.cpp" />
+    <ClCompile Include="Fx_HeroEffect.cpp" />
+    <ClCompile Include="FxClystalGlow.cpp" />
+    <ClCompile Include="FxElectricParticle.cpp" />
+    <ClCompile Include="FxFireSmokeParticle.cpp" />
+    <ClCompile Include="FxLightningEx.cpp" />
+    <ClCompile Include="FxPortalBOSSRAID.cpp" />
+    <ClCompile Include="FxWaterfall.cpp" />
+    <ClCompile Include="FxWaterfallParticle.cpp" />
+    <ClCompile Include="LHFx_Perom.cpp" />
+    <ClCompile Include="LHFx_Perom_Alpha.cpp" />
+    <ClCompile Include="LHFX_Perom_Blader.cpp" />
+    <ClCompile Include="LHFX_Perom_Boom.cpp" />
+    <ClCompile Include="LHFx_Perom_Common.cpp" />
+    <ClCompile Include="LHFX_Perom_Cross.cpp" />
+    <ClCompile Include="LHFx_Perom_DSystem.cpp" />
+    <ClCompile Include="LHFX_Perom_Field.cpp" />
+    <ClCompile Include="LHFX_Perom_Meta.cpp" />
+    <ClCompile Include="LHFx_Perom_Overload.cpp" />
+    <ClCompile Include="LHFX_Perom_Pierce.cpp" />
+    <ClCompile Include="LHFX_Perom_Shotgun.cpp" />
+    <ClCompile Include="LHFX_Perom_Spin.cpp" />
+    <ClCompile Include="LHFX_Perom_Strike.cpp" />
+    <ClCompile Include="LHFX_Perom_Thrust.cpp" />
+    <ClCompile Include="LHFX_Perom_Wheelwind.cpp" />
+    <ClCompile Include="ControlBossRaidInfo.cpp" />
+    <ClCompile Include="ControlHeroFinalRank.cpp" />
+    <ClCompile Include="ControlHeroList.cpp" />
+    <ClCompile Include="ControlHeroPrivilege.cpp" />
+    <ClCompile Include="g_devlogbox.cpp" />
+    <ClCompile Include="ControlPremiumServiceChaMove.cpp" />
+    <ClCompile Include="PremiumExchange.cpp" />
+    <ClCompile Include="LHExcelReader.cpp" />
+    <ClCompile Include="LHFile.cpp" />
+    <ClCompile Include="LHFacade_Item.cpp" />
+    <ClCompile Include="LHItemSystem_Manager.cpp" />
+    <ClCompile Include="LHParam_10YearEvent.cpp" />
+    <ClCompile Include="LHParam_ConfusionItem.cpp" />
+    <ClCompile Include="LHParam_ConversionItem.cpp" />
+    <ClCompile Include="LHParam_EnchantItem.cpp" />
+    <ClCompile Include="LHParam_GMagicStone.cpp" />
+    <ClCompile Include="LHParam_MakeItem.cpp" />
+    <ClCompile Include="LHParam_SeperateItem.cpp" />
+    <ClCompile Include="LHUI_Upgrade.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cursor1.cur" />
+    <None Include="Laghaim.ico" />
+    <None Include="SEED_256_KISA.tab" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\common\errorcode_define.h" />
+    <ClInclude Include="..\common\info_define.h" />
+    <ClInclude Include="..\common\packet_define.h" />
+    <ClInclude Include="..\common\packet_enum.h" />
+    <ClInclude Include="..\common\packet_header.h" />
+    <ClInclude Include="..\common\rntype.h" />
+    <ClInclude Include="BaseballManager.h" />
+    <ClInclude Include="BaseballRewardManager.h" />
+    <ClInclude Include="BingoManager.h" />
+    <ClInclude Include="BuffItemMgr.h" />
+    <ClInclude Include="ChatUtilMgr.h" />
+    <ClInclude Include="CheckBox.h" />
+    <ClInclude Include="CommonConfig.h" />
+    <ClInclude Include="ControlBaseball.h" />
+    <ClInclude Include="ControlBaseballReward.h" />
+    <ClInclude Include="ControlBingo.h" />
+    <ClInclude Include="ControlDecardiBattle.h" />
+    <ClInclude Include="ControlDiceGame.h" />
+    <ClInclude Include="ControlDiceGameReward.h" />
+    <ClInclude Include="ControlFishing.h" />
+    <ClInclude Include="ControlFishingReward.h" />
+    <ClInclude Include="ControlLetterRecv.h" />
+    <ClInclude Include="ControlLetterSend.h" />
+    <ClInclude Include="ControlLetterWindow.h" />
+    <ClInclude Include="ControlLottery.h" />
+    <ClInclude Include="ControlLotto.h" />
+    <ClInclude Include="ControlPopupMenu.h" />
+    <ClInclude Include="ControlRoyale.h" />
+    <ClInclude Include="ControlYutboard.h" />
+    <ClInclude Include="CsyManager.h" />
+    <ClInclude Include="DataFriend.h" />
+    <ClInclude Include="DecardiBattleManager.h" />
+    <ClInclude Include="DefenseValMgr.h" />
+    <ClInclude Include="DiceGameManager.h" />
+    <ClInclude Include="DiceGameRewardManager.h" />
+    <ClInclude Include="EventOnOffMgr.h" />
+    <ClInclude Include="FishingManager.h" />
+    <ClInclude Include="FishingRewardManager.h" />
+    <ClInclude Include="FxBalloonKill.h" />
+    <ClInclude Include="FxCommonLolo.h" />
+    <ClInclude Include="ItemFakeOptionMgr.h" />
+    <ClInclude Include="ItemInfoScaleMgr.h" />
+    <ClInclude Include="ItemOutlineMgr.h" />
+    <ClInclude Include="LetterManager.h" />
+    <ClInclude Include="LoloManager.h" />
+    <ClInclude Include="LotteryManager.h" />
+    <ClInclude Include="LottoManager.h" />
+    <ClInclude Include="PacketProc.h" />
+    <ClInclude Include="PacketSend.h" />
+    <ClInclude Include="RecvPacketMgr.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="2DResMgr.h" />
+    <ClInclude Include="3d_PosPoint.h" />
+    <ClInclude Include="AlphaPopUp.h" />
+    <ClInclude Include="AutoMouse.h" />
+    <ClInclude Include="AutoNotice.h" />
+    <ClInclude Include="BaseInterface.h" />
+    <ClInclude Include="baseTgaWindow.h" />
+    <ClInclude Include="BaseUI.h" />
+    <ClInclude Include="basewindow.h" />
+    <ClInclude Include="basicbutton.h" />
+    <ClInclude Include="BasicMenu.h" />
+    <ClInclude Include="BasicStatic.h" />
+    <ClInclude Include="BattleStart.h" />
+    <ClInclude Include="ChaAct.h" />
+    <ClInclude Include="ChangeHair.h" />
+    <ClInclude Include="ChaSta.h" />
+    <ClInclude Include="CheckButton.h" />
+    <ClInclude Include="CloudSea.h" />
+    <ClInclude Include="ClrAlloc.h" />
+    <ClInclude Include="Cmd.h" />
+    <ClInclude Include="ComboBox.h" />
+    <ClInclude Include="Compas.h" />
+    <ClInclude Include="Config.h" />
+    <ClInclude Include="Config_KOR.h" />
+    <ClInclude Include="config_TH.h" />
+    <ClInclude Include="ControlBottom.h" />
+    <ClInclude Include="ControlCashShop.h" />
+    <ClInclude Include="ControlDocument.h" />
+    <ClInclude Include="ControlExchange.h" />
+    <ClInclude Include="ControlGate.h" />
+    <ClInclude Include="ControlGroup.h" />
+    <ClInclude Include="ControlHelp.h" />
+    <ClInclude Include="ControlHelper.h" />
+    <ClInclude Include="ControlHelpPet.h" />
+    <ClInclude Include="ControlInven.h" />
+    <ClInclude Include="ControlLetter.h" />
+    <ClInclude Include="ControlLowGuildMaster.h" />
+    <ClInclude Include="ControlMap.h" />
+    <ClInclude Include="ControlNotice.h" />
+    <ClInclude Include="ControlParty.h" />
+    <ClInclude Include="ControlPeiceShop.h" />
+    <ClInclude Include="ControlPetKeep.h" />
+    <ClInclude Include="ControlPetShop.h" />
+    <ClInclude Include="ControlPetShop2.h" />
+    <ClInclude Include="ControlPetStatus.h" />
+    <ClInclude Include="ControlScore.h" />
+    <ClInclude Include="ControlSelectMenu.h" />
+    <ClInclude Include="ControlShop.h" />
+    <ClInclude Include="ControlSkill.h" />
+    <ClInclude Include="ControlSocial.h" />
+    <ClInclude Include="ControlStatus.h" />
+    <ClInclude Include="ControlTeleportItem.h" />
+    <ClInclude Include="ControlTop.h" />
+    <ClInclude Include="ControlUpgrade.h" />
+    <ClInclude Include="ControlUserShop.h" />
+    <ClInclude Include="ControlWareHouse.h" />
+    <ClInclude Include="Country.h" />
+    <ClInclude Include="CParticle.h" />
+    <ClInclude Include="CParticleSystem.h" />
+    <ClInclude Include="createcharacterpage.h" />
+    <ClInclude Include="DecoObj.h" />
+    <ClInclude Include="Dirtsnd.h" />
+    <ClInclude Include="DMusicMgr.h" />
+    <ClInclude Include="DragBox.h" />
+    <ClInclude Include="DragProgress.h" />
+    <ClInclude Include="DropStar.h" />
+    <ClInclude Include="Event_Ancient.h" />
+    <ClInclude Include="event_family.h" />
+    <ClInclude Include="EventLegKnockAppear.h" />
+    <ClInclude Include="EventScript.h" />
+    <ClInclude Include="EventScriptActor.h" />
+    <ClInclude Include="ExtraButton.h" />
+    <ClInclude Include="FactoryPattern.h" />
+    <ClInclude Include="Filtering.h" />
+    <ClInclude Include="FireFly.h" />
+    <ClInclude Include="FxLv400Effect.h" />
+    <ClInclude Include="g_ImageManager.h" />
+    <ClInclude Include="g_LogMaker.h" />
+    <ClInclude Include="g_stringmanager.h" />
+    <ClInclude Include="Gamble.h" />
+    <ClInclude Include="GoodShadow.h" />
+    <ClInclude Include="GuardTower.h" />
+    <ClInclude Include="GuildHunt.h" />
+    <ClInclude Include="GuildPK.h" />
+    <ClInclude Include="GuildWar.h" />
+    <ClInclude Include="GUtil.h" />
+    <ClInclude Include="HanIme.h" />
+    <ClInclude Include="HappyNewYear.h" />
+    <ClInclude Include="headers.h" />
+    <ClInclude Include="HellDown_Circle.h" />
+    <ClInclude Include="Help.h" />
+    <ClInclude Include="HelpScript.h" />
+    <ClInclude Include="ijl.h" />
+    <ClInclude Include="ImageDefine.h" />
+    <ClInclude Include="Interchange.h" />
+    <ClInclude Include="InterFileConnection.h" />
+    <ClInclude Include="Item.h" />
+    <ClInclude Include="ItemProto.h" />
+    <ClInclude Include="ItemRender.h" />
+    <ClInclude Include="JIMEDLL.H" />
+    <ClInclude Include="L_MultiEditBox.h" />
+    <ClInclude Include="L_SkillBox.h" />
+    <ClInclude Include="LandDemo.h" />
+    <ClInclude Include="LdDecoObj.h" />
+    <ClInclude Include="LetterBox.h" />
+    <ClInclude Include="LetterFriend.h" />
+    <ClInclude Include="LetterList.h" />
+    <ClInclude Include="LetterReject.h" />
+    <ClInclude Include="LetterSend.h" />
+    <ClInclude Include="LetterView.h" />
+    <ClInclude Include="LevelDownManager.h" />
+    <ClInclude Include="LH_SelectCharacterPage.h" />
+    <ClInclude Include="LHGlobal_String.h" />
+    <ClInclude Include="LHOverInfo.h" />
+    <ClInclude Include="LHParam_Manager.h" />
+    <ClInclude Include="LHPath_Define.h" />
+    <ClInclude Include="LHRenderTarget_Character.h" />
+    <ClInclude Include="LHSingleton.h" />
+    <ClInclude Include="LHTable_Manager.h" />
+    <ClInclude Include="LHTextChecker.h" />
+    <ClInclude Include="LHUI_Base.h" />
+    <ClInclude Include="LHUI_Captcha.h" />
+    <ClInclude Include="LHUI_CashShop.h" />
+    <ClInclude Include="LHUI_Define.h" />
+    <ClInclude Include="LHUI_Gate.h" />
+    <ClInclude Include="LHUI_OpEvent.h" />
+    <ClInclude Include="LHUI_SeccondAuth.h" />
+    <ClInclude Include="LHUI_TakeBox.h" />
+    <ClInclude Include="LHUI_TItleSystem.h" />
+    <ClInclude Include="LHUtil_Text.h" />
+    <ClInclude Include="LightCtrl.h" />
+    <ClInclude Include="ListBox.h" />
+    <ClInclude Include="LoadEffectSound.h" />
+    <ClInclude Include="LockSmith.h" />
+    <ClInclude Include="LoginDlg.h" />
+    <ClInclude Include="loginpage.h" />
+    <ClInclude Include="LogoPage.h" />
+    <ClInclude Include="LShiftMenu.h" />
+    <ClInclude Include="main.h" />
+    <ClInclude Include="MakeAccPage.h" />
+    <ClInclude Include="MatBattleUI.h" />
+    <ClInclude Include="matlist.h" />
+    <ClInclude Include="MatMakeRoom.h" />
+    <ClInclude Include="MatSurvivalUI.h" />
+    <ClInclude Include="Mouse.h" />
+    <ClInclude Include="Mp3Module.h" />
+    <ClInclude Include="MsgPopUp.h" />
+    <ClInclude Include="multilistbox.h" />
+    <ClInclude Include="NewListBox.h" />
+    <ClInclude Include="Nk2DFrame.h" />
+    <ClInclude Include="NkCharacter.h" />
+    <ClInclude Include="NkKeyboard.h" />
+    <ClInclude Include="NkMob.h" />
+    <ClInclude Include="NkMyPet.h" />
+    <ClInclude Include="NKObjQuadNode.h" />
+    <ClInclude Include="NkPet.h" />
+    <ClInclude Include="NoticeList.h" />
+    <ClInclude Include="NoticeView.h" />
+    <ClInclude Include="NoWhisper.h" />
+    <ClInclude Include="NPC_Define.h" />
+    <ClInclude Include="ObjectList.h" />
+    <ClInclude Include="OneSelfInfo.h" />
+    <ClInclude Include="OptionPg.h" />
+    <ClInclude Include="pages.h" />
+    <ClInclude Include="PasswordCheck.h" />
+    <ClInclude Include="Path.h" />
+    <ClInclude Include="pet_level.h" />
+    <ClInclude Include="PetProduct.h" />
+    <ClInclude Include="PlaceInfo.h" />
+    <ClInclude Include="platinum.h" />
+    <ClInclude Include="Process.h" />
+    <ClInclude Include="Product.h" />
+    <ClInclude Include="ProgressBox.h" />
+    <ClInclude Include="PVPWidget.h" />
+    <ClInclude Include="QlistBox.h" />
+    <ClInclude Include="QuestData.h" />
+    <ClInclude Include="revision.h" />
+    <ClInclude Include="rnpacket.h" />
+    <ClInclude Include="R_SkillBox.h" />
+    <ClInclude Include="Refine.h" />
+    <ClInclude Include="ReservationWindow.h" />
+    <ClInclude Include="RShiftMenu.h" />
+    <ClInclude Include="ScriptActFunc.h" />
+    <ClInclude Include="Scroll.h" />
+    <ClInclude Include="ScrollBox.h" />
+    <ClInclude Include="SEED_256_KISA.h" />
+    <ClInclude Include="selectcharacterpage.h" />
+    <ClInclude Include="SetItemEffMgr.h" />
+    <ClInclude Include="setvaluepage.h" />
+    <ClInclude Include="sfx.h" />
+    <ClInclude Include="SFXBaseShape.h" />
+    <ClInclude Include="sfxUtil.h" />
+    <ClInclude Include="ShadowRect.h" />
+    <ClInclude Include="sheet.h" />
+    <ClInclude Include="ShoutChatMgr.h" />
+    <ClInclude Include="SkillExtendManager.h" />
+    <ClInclude Include="SkyPlane.h" />
+    <ClInclude Include="Slider.h" />
+    <ClInclude Include="SMRender.h" />
+    <ClInclude Include="SpecialItem.h" />
+    <ClInclude Include="SpeedCheck.h" />
+    <ClInclude Include="SpeedUpSmoke.h" />
+    <ClInclude Include="SpinBox.h" />
+    <ClInclude Include="SpiritMode.h" />
+    <ClInclude Include="SplashWnd.h" />
+    <ClInclude Include="Sprite.h" />
+    <ClInclude Include="startpage.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="string_res.h" />
+    <ClInclude Include="SummerEvent.h" />
+    <ClInclude Include="SvrMessage.h" />
+    <ClInclude Include="Tcpipcon.h" />
+    <ClInclude Include="TcpUtil.h" />
+    <ClInclude Include="TextBoard.h" />
+    <ClInclude Include="TextBox.h" />
+    <ClInclude Include="TextList.h" />
+    <ClInclude Include="TextOutBox.h" />
+    <ClInclude Include="UIFriend.h" />
+    <ClInclude Include="UIFriendDenyList.h" />
+    <ClInclude Include="UIFriendDenyListPopupMenu.h" />
+    <ClInclude Include="UIFriendLine.h" />
+    <ClInclude Include="UIFriendList.h" />
+    <ClInclude Include="UIFriendListPopupMenu.h" />
+    <ClInclude Include="UIFriendList_Base.h" />
+    <ClInclude Include="UIMgr.h" />
+    <ClInclude Include="UI_AnimLolo.h" />
+    <ClInclude Include="UI_BuffItem.h" />
+    <ClInclude Include="UI_GmMacro.h" />
+    <ClInclude Include="WarInfo.h" />
+    <ClInclude Include="WarRequest.h" />
+    <ClInclude Include="WarTax.h" />
+    <ClInclude Include="WeatherMgr.h" />
+    <ClInclude Include="WebCtrl.h" />
+    <ClInclude Include="WebWorld.h" />
+    <ClInclude Include="window_class.h" />
+    <ClInclude Include="window_resource.h" />
+    <ClInclude Include="WindowMgr.h" />
+    <ClInclude Include="WorldCupStart.h" />
+    <ClInclude Include="YutManager.h" />
+    <ClInclude Include="AutoPlay_test.h" />
+    <ClInclude Include="DevTestGmCommand.h" />
+    <ClInclude Include="HackProcessMgr.h" />
+    <ClInclude Include="LH_Decal.h" />
+    <ClInclude Include="LHAutoPlay_Define.h" />
+    <ClInclude Include="PingTest.h" />
+    <ClInclude Include="singleton.h" />
+    <ClInclude Include="ControlGuildBattle.h" />
+    <ClInclude Include="ControlGuildM.h" />
+    <ClInclude Include="ControlGuildSHouse.h" />
+    <ClInclude Include="ControlGuildT.h" />
+    <ClInclude Include="guild_battle.h" />
+    <ClInclude Include="guild_data.h" />
+    <ClInclude Include="guild_mark.h" />
+    <ClInclude Include="guild_member_notice.h" />
+    <ClInclude Include="guild_memberpage.h" />
+    <ClInclude Include="guild_nonmemberpage.h" />
+    <ClInclude Include="guild_promotion.h" />
+    <ClInclude Include="guild_search.h" />
+    <ClInclude Include="s_grade_control.h" />
+    <ClInclude Include="s_guild_func.h" />
+    <ClInclude Include="s_guild_manager.h" />
+    <ClInclude Include="s_Job_control.h" />
+    <ClInclude Include="s_joinrequest_control.h" />
+    <ClInclude Include="s_member_control.h" />
+    <ClInclude Include="s_notice_control.h" />
+    <ClInclude Include="wanted_data.h" />
+    <ClInclude Include="wanted_list.h" />
+    <ClInclude Include="wanted_my_menu.h" />
+    <ClInclude Include="wanted_network_func.h" />
+    <ClInclude Include="wanted_register.h" />
+    <ClInclude Include="wanted_start_page.h" />
+    <ClInclude Include="DmitronBattle.h" />
+    <ClInclude Include="DmitronBattleStatus.h" />
+    <ClInclude Include="DmitronBattleTax.h" />
+    <ClInclude Include="FxSet.h" />
+    <ClInclude Include="Skill.h" />
+    <ClInclude Include="FxAdrenaline.h" />
+    <ClInclude Include="FxAidiaFire.h" />
+    <ClInclude Include="FxAirRaid.h" />
+    <ClInclude Include="FxArupakaSpit.h" />
+    <ClInclude Include="FxAssault.h" />
+    <ClInclude Include="FxAttack_Capsyong.h" />
+    <ClInclude Include="FxAttackFixLolo.h" />
+    <ClInclude Include="FxAttackMoveLolo.h" />
+    <ClInclude Include="FxAutoLaser.h" />
+    <ClInclude Include="FxBabySoul.h" />
+    <ClInclude Include="FxBash.h" />
+    <ClInclude Include="FxBee.h" />
+    <ClInclude Include="FxBeeBoom.h" />
+    <ClInclude Include="FxBlackHole.h" />
+    <ClInclude Include="FxBleed.h" />
+    <ClInclude Include="FxBora.h" />
+    <ClInclude Include="FxBoraBoom.h" />
+    <ClInclude Include="FxCasting.h" />
+    <ClInclude Include="FxCatchFlag.h" />
+    <ClInclude Include="FxCatchFlagDir.h" />
+    <ClInclude Include="FxChain.h" />
+    <ClInclude Include="FxChakram.h" />
+    <ClInclude Include="FxChaos.h" />
+    <ClInclude Include="FxChargeCannon.h" />
+    <ClInclude Include="FxCharWave.h" />
+    <ClInclude Include="FxConditionEffects.h" />
+    <ClInclude Include="FxControlLight.h" />
+    <ClInclude Include="FxDeathWaveAim.h" />
+    <ClInclude Include="FxDemiCrusher.h" />
+    <ClInclude Include="FxDmitronEffects.h" />
+    <ClInclude Include="FxDragonEffects.h" />
+    <ClInclude Include="FxDrillStone.h" />
+    <ClInclude Include="FxDropBasin.h" />
+    <ClInclude Include="FxDropCandy.h" />
+    <ClInclude Include="FxDropDaruma.h" />
+    <ClInclude Include="FxDropSword.h" />
+    <ClInclude Include="FxDSlash.h" />
+    <ClInclude Include="FxDstone.h" />
+    <ClInclude Include="FxDStoneEff.h" />
+    <ClInclude Include="FxDurant.h" />
+    <ClInclude Include="FxDurantTarget.h" />
+    <ClInclude Include="FxEarthQuake.h" />
+    <ClInclude Include="FxEatEffects.h" />
+    <ClInclude Include="FxElectricHammer.h" />
+    <ClInclude Include="FxFallOffStone.h" />
+    <ClInclude Include="FxFireBoomShort.h" />
+    <ClInclude Include="FxFireParticle.h" />
+    <ClInclude Include="FxFireTower.h" />
+    <ClInclude Include="FxFireWorks.h" />
+    <ClInclude Include="FxFlame.h" />
+    <ClInclude Include="FxFlameSpear.h" />
+    <ClInclude Include="FxFly.h" />
+    <ClInclude Include="FxFlyingCrash.h" />
+    <ClInclude Include="FxFlyingCrash2.h" />
+    <ClInclude Include="FxFollow.h" />
+    <ClInclude Include="FxFreePvpRing.h" />
+    <ClInclude Include="FxFrost.h" />
+    <ClInclude Include="FxGatheringGun.h" />
+    <ClInclude Include="FxGhostHunt.h" />
+    <ClInclude Include="FxGhostRise.h" />
+    <ClInclude Include="FxGreenSmoke.h" />
+    <ClInclude Include="FxGuardTower.h" />
+    <ClInclude Include="FxHealEffects.h" />
+    <ClInclude Include="FxHellCry.h" />
+    <ClInclude Include="FxHellDown_Around.h" />
+    <ClInclude Include="FxHellDown_Circle2.h" />
+    <ClInclude Include="FxHellDown_Lightly.h" />
+    <ClInclude Include="FxHellDown_Lightning.h" />
+    <ClInclude Include="FxHellDown_Spark.h" />
+    <ClInclude Include="FxHitBoomEffects.h" />
+    <ClInclude Include="FxHitEffects.h" />
+    <ClInclude Include="FxHitPetEffects.h" />
+    <ClInclude Include="FxHitPowerEffects.h" />
+    <ClInclude Include="FxHorn.h" />
+    <ClInclude Include="FxHornBoom.h" />
+    <ClInclude Include="FxIceBlot.h" />
+    <ClInclude Include="FxKhanHitEffects.h" />
+    <ClInclude Include="FxLevelUp.h" />
+    <ClInclude Include="FxLifeCommon.h" />
+    <ClInclude Include="FxLifeExpansion.h" />
+    <ClInclude Include="FxLifeLight.h" />
+    <ClInclude Include="FxLightBallBoomNew.h" />
+    <ClInclude Include="FxLightHeal.h" />
+    <ClInclude Include="FxLightParticle.h" />
+    <ClInclude Include="FxMagicArrow.h" />
+    <ClInclude Include="FxMagicLaser.h" />
+    <ClInclude Include="FxMagicSword.h" />
+    <ClInclude Include="FxMercernerySlash.h" />
+    <ClInclude Include="FxMeteor.h" />
+    <ClInclude Include="FxMeteorite.h" />
+    <ClInclude Include="FxMeteoriteBoom.h" />
+    <ClInclude Include="FxMine.h" />
+    <ClInclude Include="FxMobParticle.h" />
+    <ClInclude Include="FxMobShowUp.h" />
+    <ClInclude Include="FxMoth.h" />
+    <ClInclude Include="FxMuramasa.h" />
+    <ClInclude Include="FxMusicalNote.h" />
+    <ClInclude Include="FxNuclearAim.h" />
+    <ClInclude Include="FxNuclearBoom.h" />
+    <ClInclude Include="FxOnOffEffects.h" />
+    <ClInclude Include="FxOptionSkillEffects.h" />
+    <ClInclude Include="FxParticle.h" />
+    <ClInclude Include="FxPebbleShot.h" />
+    <ClInclude Include="FxPetSkill.h" />
+    <ClInclude Include="FxPoison.h" />
+    <ClInclude Include="FxPoisonFog.h" />
+    <ClInclude Include="FxPowerUp.h" />
+    <ClInclude Include="FxProtectionShield.h" />
+    <ClInclude Include="FxRandomFire.h" />
+    <ClInclude Include="FxRandomShoot.h" />
+    <ClInclude Include="FxRedFire.h" />
+    <ClInclude Include="FxReflection.h" />
+    <ClInclude Include="FxRegenBar.h" />
+    <ClInclude Include="FxRegenStart.h" />
+    <ClInclude Include="FxResurrection.h" />
+    <ClInclude Include="FxRocket.h" />
+    <ClInclude Include="FxRunSmoke.h" />
+    <ClInclude Include="FxScanView.h" />
+    <ClInclude Include="FxScrollDamage.h" />
+    <ClInclude Include="FxScrollLight.h" />
+    <ClInclude Include="FxScrollRing.h" />
+    <ClInclude Include="FxShadowSlash.h" />
+    <ClInclude Include="FxShadowSlash2.h" />
+    <ClInclude Include="FxShield.h" />
+    <ClInclude Include="FxShieldBlock.h" />
+    <ClInclude Include="FxShilon.h" />
+    <ClInclude Include="FxShilonMaster.h" />
+    <ClInclude Include="FxShockSpear.h" />
+    <ClInclude Include="FxShoot.h" />
+    <ClInclude Include="FxShootAttacked.h" />
+    <ClInclude Include="FxShowUp2.h" />
+    <ClInclude Include="FxSiren.h" />
+    <ClInclude Include="FxSkillLight.h" />
+    <ClInclude Include="FxSmokeParticle.h" />
+    <ClInclude Include="FxSoulDust.h" />
+    <ClInclude Include="FxSpaceSlash.h" />
+    <ClInclude Include="FxSpeedUpSmoke.h" />
+    <ClInclude Include="FxSpiritMode.h" />
+    <ClInclude Include="FxSpiritMode2.h" />
+    <ClInclude Include="FxSprayParticle.h" />
+    <ClInclude Include="FxStarFlare.h" />
+    <ClInclude Include="FxStoneBrust.h" />
+    <ClInclude Include="FxStoneRance.h" />
+    <ClInclude Include="FxStoneRance2.h" />
+    <ClInclude Include="FxStoneShot.h" />
+    <ClInclude Include="FxSummonFire.h" />
+    <ClInclude Include="FxSummonFireBoom.h" />
+    <ClInclude Include="FxSummonSquad.h" />
+    <ClInclude Include="FxSumPart.h" />
+    <ClInclude Include="FxTeleport.h" />
+    <ClInclude Include="FxTLVertex.h" />
+    <ClInclude Include="FxTornadoHammer.h" />
+    <ClInclude Include="FxTornadoRuin.h" />
+    <ClInclude Include="FxTurnParticle.h" />
+    <ClInclude Include="FxVampire.h" />
+    <ClInclude Include="FxVampireAttack.h" />
+    <ClInclude Include="FxWarGiantAttack.h" />
+    <ClInclude Include="FxWarGiantDie.h" />
+    <ClInclude Include="FxWarGiantMulti.h" />
+    <ClInclude Include="FxWaterSprinkle.h" />
+    <ClInclude Include="FxWaterSprinkleBoom.h" />
+    <ClInclude Include="FxWeaponEffects.h" />
+    <ClInclude Include="FxWildSmash.h" />
+    <ClInclude Include="FxWorldCup.h" />
+    <ClInclude Include="FxWorldCupBoom.h" />
+    <ClInclude Include="Fx_BossRaid_Aidia1_01.h" />
+    <ClInclude Include="Fx_BossRaid_Aidia1_02.h" />
+    <ClInclude Include="Fx_BossRaid_Aidia1_02_Shockwave.h" />
+    <ClInclude Include="FX_BossRaid_Aidia2_01.h" />
+    <ClInclude Include="FX_BossRaid_Aidia2_02.h" />
+    <ClInclude Include="FX_BossRaid_Aidia2_03.h" />
+    <ClInclude Include="Fx_BossRaid_Aidia3_01.h" />
+    <ClInclude Include="Fx_BossRaid_Aidia3_02.h" />
+    <ClInclude Include="Fx_BossRaid_bulkan1_02.h" />
+    <ClInclude Include="Fx_BossRaid_Bulkan1_03.h" />
+    <ClInclude Include="Fx_BossRaid_bulkan2_02.h" />
+    <ClInclude Include="Fx_BossRaid_bulkan3_02.h" />
+    <ClInclude Include="Fx_BossRaid_bulkan3_03.h" />
+    <ClInclude Include="Fx_BossRaid_Human1_02.h" />
+    <ClInclude Include="Fx_BossRaid_Human1_03.h" />
+    <ClInclude Include="Fx_BossRaid_human2_02.h" />
+    <ClInclude Include="Fx_BossRaid_human2_03.h" />
+    <ClInclude Include="Fx_BossRaid_Human3_02.h" />
+    <ClInclude Include="Fx_BossRaid_Hybri1_01.h" />
+    <ClInclude Include="Fx_BossRaid_Hybri1_02.h" />
+    <ClInclude Include="Fx_BossRaid_Hybri2_02.h" />
+    <ClInclude Include="Fx_BossRaid_Hybri3_01.h" />
+    <ClInclude Include="Fx_BossRaid_Hybri3_02.h" />
+    <ClInclude Include="Fx_BossRaid_Kai1_01.h" />
+    <ClInclude Include="Fx_BossRaid_Kai1_02.h" />
+    <ClInclude Include="Fx_BossRaid_Kai2_01.h" />
+    <ClInclude Include="Fx_BossRaid_Kai2_02.h" />
+    <ClInclude Include="Fx_BossRaid_Kai2_03.h" />
+    <ClInclude Include="Fx_BossRaid_Kai3_01.h" />
+    <ClInclude Include="Fx_BossRaid_Kai3_02.h" />
+    <ClInclude Include="Fx_BossRaid_Kai3_03.h" />
+    <ClInclude Include="Fx_BossRaid_LastBoss_02.h" />
+    <ClInclude Include="Fx_BossRaid_LastBoss_03.h" />
+    <ClInclude Include="Fx_BossRaid_LastBoss_04.h" />
+    <ClInclude Include="Fx_HeroEffect.h" />
+    <ClInclude Include="FxClystalGlow.h" />
+    <ClInclude Include="FxElectricParticle.h" />
+    <ClInclude Include="FxFireSmokeParticle.h" />
+    <ClInclude Include="FxLightningEx.h" />
+    <ClInclude Include="FxPortalBOSSRAID.h" />
+    <ClInclude Include="FxWaterfall.h" />
+    <ClInclude Include="FxWaterfallParticle.h" />
+    <ClInclude Include="LHFx_Perom.h" />
+    <ClInclude Include="LHFx_Perom_Alpha.h" />
+    <ClInclude Include="LHFX_Perom_Blader.h" />
+    <ClInclude Include="LHFX_Perom_Boom.h" />
+    <ClInclude Include="LHFx_Perom_Common.h" />
+    <ClInclude Include="LHFX_Perom_Cross.h" />
+    <ClInclude Include="LHFx_Perom_DSystem.h" />
+    <ClInclude Include="LHFX_Perom_Field.h" />
+    <ClInclude Include="LHFX_Perom_Meta.h" />
+    <ClInclude Include="LHFx_Perom_Overload.h" />
+    <ClInclude Include="LHFX_Perom_Pierce.h" />
+    <ClInclude Include="LHFX_Perom_Shotgun.h" />
+    <ClInclude Include="LHFX_Perom_Spin.h" />
+    <ClInclude Include="LHFX_Perom_Strike.h" />
+    <ClInclude Include="LHFX_Perom_Thrust.h" />
+    <ClInclude Include="LHFX_Perom_Wheelwind.h" />
+    <ClInclude Include="ControlBossRaidInfo.h" />
+    <ClInclude Include="ControlHeroFinalRank.h" />
+    <ClInclude Include="ControlHeroList.h" />
+    <ClInclude Include="ControlHeroPrivilege.h" />
+    <ClInclude Include="g_devlogbox.h" />
+    <ClInclude Include="ControlPremiumServiceChaMove.h" />
+    <ClInclude Include="PremiumExchange.h" />
+    <ClInclude Include="LHExcelReader.h" />
+    <ClInclude Include="LHFile.h" />
+    <ClInclude Include="LHFacade_Item.h" />
+    <ClInclude Include="LHItemSystem_Manager.h" />
+    <ClInclude Include="LHParam_10YearEvent.h" />
+    <ClInclude Include="LHParam_ConfusionItem.h" />
+    <ClInclude Include="LHParam_ConversionItem.h" />
+    <ClInclude Include="LHParam_EnchantItem.h" />
+    <ClInclude Include="LHParam_GMagicStone.h" />
+    <ClInclude Include="LHParam_MakeItem.h" />
+    <ClInclude Include="LHParam_SeperateItem.h" />
+    <ClInclude Include="LHUI_Upgrade.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="winmain.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Laghaim_Update\Laghaim_Update.vcxproj">
+      <Project>{0e1773db-cd39-45b9-b7d1-86652e92a006}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

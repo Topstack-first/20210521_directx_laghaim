@@ -1,0 +1,65 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Laghaim_Engine", "..\Laghaim_Engine\Laghaim_Engine_2010.vcxproj", "{0B3F9E86-A12A-4788-AB8D-2F58D70B98E8}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Laghaim_Client", "Laghaim_2010.vcxproj", "{F57A6098-F6EA-4E30-AA7F-DB943861C9AA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0B3F9E86-A12A-4788-AB8D-2F58D70B98E8} = {0B3F9E86-A12A-4788-AB8D-2F58D70B98E8}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Laghaim_Update", "..\Laghaim_Update\Laghaim_Update.vcxproj", "{0E1773DB-CD39-45B9-B7D1-86652E92A006}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{14FC6C10-D405-4FA6-95ED-AE9EEAA5F4BB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		KP_Debug_Game|Win32 = KP_Debug_Game|Win32
+		KP_Release_Game|Win32 = KP_Release_Game|Win32
+		Release|Win32 = Release|Win32
+		TH_Debug_Game|Win32 = TH_Debug_Game|Win32
+		TH_Release_Game|Win32 = TH_Release_Game|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0B3F9E86-A12A-4788-AB8D-2F58D70B98E8}.Debug|Win32.ActiveCfg = Debug_Pack|Win32
+		{0B3F9E86-A12A-4788-AB8D-2F58D70B98E8}.Debug|Win32.Build.0 = Debug_Pack|Win32
+		{0B3F9E86-A12A-4788-AB8D-2F58D70B98E8}.KP_Debug_Game|Win32.ActiveCfg = Debug_Pack|Win32
+		{0B3F9E86-A12A-4788-AB8D-2F58D70B98E8}.KP_Debug_Game|Win32.Build.0 = Debug_Pack|Win32
+		{0B3F9E86-A12A-4788-AB8D-2F58D70B98E8}.KP_Release_Game|Win32.ActiveCfg = Release_Pack|Win32
+		{0B3F9E86-A12A-4788-AB8D-2F58D70B98E8}.KP_Release_Game|Win32.Build.0 = Release_Pack|Win32
+		{0B3F9E86-A12A-4788-AB8D-2F58D70B98E8}.Release|Win32.ActiveCfg = Release_Pack|Win32
+		{0B3F9E86-A12A-4788-AB8D-2F58D70B98E8}.Release|Win32.Build.0 = Release_Pack|Win32
+		{0B3F9E86-A12A-4788-AB8D-2F58D70B98E8}.TH_Debug_Game|Win32.ActiveCfg = Debug_Pack|Win32
+		{0B3F9E86-A12A-4788-AB8D-2F58D70B98E8}.TH_Debug_Game|Win32.Build.0 = Debug_Pack|Win32
+		{0B3F9E86-A12A-4788-AB8D-2F58D70B98E8}.TH_Release_Game|Win32.ActiveCfg = Release_Pack|Win32
+		{0B3F9E86-A12A-4788-AB8D-2F58D70B98E8}.TH_Release_Game|Win32.Build.0 = Release_Pack|Win32
+		{F57A6098-F6EA-4E30-AA7F-DB943861C9AA}.Debug|Win32.ActiveCfg = TH_Release_Game|Win32
+		{F57A6098-F6EA-4E30-AA7F-DB943861C9AA}.Debug|Win32.Build.0 = TH_Release_Game|Win32
+		{F57A6098-F6EA-4E30-AA7F-DB943861C9AA}.KP_Debug_Game|Win32.ActiveCfg = KP_Debug_Game|Win32
+		{F57A6098-F6EA-4E30-AA7F-DB943861C9AA}.KP_Debug_Game|Win32.Build.0 = KP_Debug_Game|Win32
+		{F57A6098-F6EA-4E30-AA7F-DB943861C9AA}.KP_Release_Game|Win32.ActiveCfg = KP_Release_Game|Win32
+		{F57A6098-F6EA-4E30-AA7F-DB943861C9AA}.KP_Release_Game|Win32.Build.0 = KP_Release_Game|Win32
+		{F57A6098-F6EA-4E30-AA7F-DB943861C9AA}.Release|Win32.ActiveCfg = TH_Release_Game|Win32
+		{F57A6098-F6EA-4E30-AA7F-DB943861C9AA}.Release|Win32.Build.0 = TH_Release_Game|Win32
+		{F57A6098-F6EA-4E30-AA7F-DB943861C9AA}.TH_Debug_Game|Win32.ActiveCfg = TH_Debug_Game|Win32
+		{F57A6098-F6EA-4E30-AA7F-DB943861C9AA}.TH_Debug_Game|Win32.Build.0 = TH_Debug_Game|Win32
+		{F57A6098-F6EA-4E30-AA7F-DB943861C9AA}.TH_Release_Game|Win32.ActiveCfg = TH_Release_Game|Win32
+		{F57A6098-F6EA-4E30-AA7F-DB943861C9AA}.TH_Release_Game|Win32.Build.0 = TH_Release_Game|Win32
+		{0E1773DB-CD39-45B9-B7D1-86652E92A006}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0E1773DB-CD39-45B9-B7D1-86652E92A006}.Debug|Win32.Build.0 = Debug|Win32
+		{0E1773DB-CD39-45B9-B7D1-86652E92A006}.KP_Debug_Game|Win32.ActiveCfg = Debug|Win32
+		{0E1773DB-CD39-45B9-B7D1-86652E92A006}.KP_Debug_Game|Win32.Build.0 = Debug|Win32
+		{0E1773DB-CD39-45B9-B7D1-86652E92A006}.KP_Release_Game|Win32.ActiveCfg = Release|Win32
+		{0E1773DB-CD39-45B9-B7D1-86652E92A006}.KP_Release_Game|Win32.Build.0 = Release|Win32
+		{0E1773DB-CD39-45B9-B7D1-86652E92A006}.Release|Win32.ActiveCfg = Release|Win32
+		{0E1773DB-CD39-45B9-B7D1-86652E92A006}.Release|Win32.Build.0 = Release|Win32
+		{0E1773DB-CD39-45B9-B7D1-86652E92A006}.TH_Debug_Game|Win32.ActiveCfg = Debug|Win32
+		{0E1773DB-CD39-45B9-B7D1-86652E92A006}.TH_Debug_Game|Win32.Build.0 = Debug|Win32
+		{0E1773DB-CD39-45B9-B7D1-86652E92A006}.TH_Release_Game|Win32.ActiveCfg = Release|Win32
+		{0E1773DB-CD39-45B9-B7D1-86652E92A006}.TH_Release_Game|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

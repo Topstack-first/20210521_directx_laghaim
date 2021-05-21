@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug_Pack|Win32">
+      <Configuration>Debug_Pack</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_Pack|Win32">
+      <Configuration>Release_Pack</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>Laghaim_Engine</ProjectName>
+    <ProjectGuid>{0B3F9E86-A12A-4788-AB8D-2F58D70B98E8}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_Pack|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v100</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Pack|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfAtl>Dynamic</UseOfAtl>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_Pack|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Pack|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug_Pack|Win32'">lib\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug_Pack|Win32'">$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release_Pack|Win32'">lib\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release_Pack|Win32'">$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug_Pack|Win32'">NkEngineDPack</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release_Pack|Win32'">NkEnginePack</TargetName>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release_Pack|Win32'">MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis Condition="'$(Configuration)|$(Platform)'=='Release_Pack|Win32'">false</RunCodeAnalysis>
+    <CodeAnalysisIgnoreGeneratedCode Condition="'$(Configuration)|$(Platform)'=='Release_Pack|Win32'">true</CodeAnalysisIgnoreGeneratedCode>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Pack|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>./header;../DXSDK/Include;c:/local/boost_1_64_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRTBLD;WIN32;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <DisableSpecificWarnings>4244;4267;4312;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Lib>
+      <OutputFile>lib/NkEngineDPack.lib</OutputFile>
+      <AdditionalLibraryDirectories>../DXSDK/Lib</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>
+      </IgnoreSpecificDefaultLibraries>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_Pack|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>./header;../DXSDK/Include;c:/local/boost_1_64_0/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRTBLD;WIN32;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <EnablePREfast>false</EnablePREfast>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
+      <OmitFramePointers>false</OmitFramePointers>
+      <EnableFiberSafeOptimizations>false</EnableFiberSafeOptimizations>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+    </ClCompile>
+    <Lib>
+      <OutputFile>lib/NkEnginePack.lib</OutputFile>
+      <AdditionalLibraryDirectories>../DXSDK/Lib</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="CapSyong.cpp" />
+    <ClCompile Include="D3DApp.cpp" />
+    <ClCompile Include="D3DEnum.cpp" />
+    <ClCompile Include="D3DFrame.cpp" />
+    <ClCompile Include="D3DMath.cpp" />
+    <ClCompile Include="D3DUtil.cpp" />
+    <ClCompile Include="ddutil.cpp" />
+    <ClCompile Include="DFloor.cpp" />
+    <ClCompile Include="dxutil.cpp" />
+    <ClCompile Include="FileManager.cpp" />
+    <ClCompile Include="Frustum.cpp" />
+    <ClCompile Include="Header\json\json_reader.cpp" />
+    <ClCompile Include="Header\json\json_value.cpp" />
+    <ClCompile Include="Header\json\json_writer.cpp" />
+    <ClCompile Include="IndexedTexture.cpp" />
+    <ClCompile Include="Land.cpp" />
+    <ClCompile Include="Nk3DMipmap.cpp" />
+    <ClCompile Include="NKMath.cpp" />
+    <ClCompile Include="NKTerQuadNode.cpp" />
+    <ClCompile Include="QuadTreeNode.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug_Pack|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_Pack|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="VirtualFile.cpp" />
+    <ClCompile Include="WaterObj.cpp" />
+    <ClCompile Include="nfs.cpp" />
+    <ClCompile Include="nfs_data.cpp" />
+    <ClCompile Include="nfs_dt.cpp" />
+    <ClCompile Include="nfs_fat.cpp" />
+    <ClCompile Include="nfs_iio.cpp" />
+    <ClCompile Include="nfs_nt.cpp" />
+    <ClCompile Include="nfs_pmatch.cpp" />
+    <ClCompile Include="NfsVirtualFile.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Header\BTAtlWindow.h" />
+    <ClInclude Include="Header\BTMfcWindow.h" />
+    <ClInclude Include="Header\BTTrace.h" />
+    <ClInclude Include="Header\BugTrap.h" />
+    <ClInclude Include="Header\CapSyong.h" />
+    <ClInclude Include="Header\ClrAlloc.h" />
+    <ClInclude Include="Header\Config.h" />
+    <ClInclude Include="Header\Country.h" />
+    <ClInclude Include="Header\D3DApp.h" />
+    <ClInclude Include="Header\D3DEnum.h" />
+    <ClInclude Include="Header\D3DFrame.h" />
+    <ClInclude Include="Header\D3DMath.h" />
+    <ClInclude Include="Header\D3DUtil.h" />
+    <ClInclude Include="Header\ddutil.h" />
+    <ClInclude Include="header\Def.h" />
+    <ClInclude Include="Header\DFloor.h" />
+    <ClInclude Include="Header\dxutil.h" />
+    <ClInclude Include="Header\FileManager.h" />
+    <ClInclude Include="Header\Frustum.h" />
+    <ClInclude Include="Header\IndexedTexture.h" />
+    <ClInclude Include="Header\json\autolink.h" />
+    <ClInclude Include="Header\json\config.h" />
+    <ClInclude Include="Header\json\features.h" />
+    <ClInclude Include="Header\json\forwards.h" />
+    <ClInclude Include="Header\json\json.h" />
+    <ClInclude Include="Header\json\json_batchallocator.h" />
+    <ClInclude Include="Header\json\reader.h" />
+    <ClInclude Include="Header\json\value.h" />
+    <ClInclude Include="Header\json\writer.h" />
+    <ClInclude Include="Header\Land.h" />
+    <ClInclude Include="Header\MemoryPoolBase.h" />
+    <ClInclude Include="Header\Nk3DMipmap.h" />
+    <ClInclude Include="Header\NKMath.h" />
+    <ClInclude Include="Header\NKTerQuadNode.h" />
+    <ClInclude Include="Header\NKVertexType.h" />
+    <ClInclude Include="Header\QuadTreeNode.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="header\singleton.h" />
+    <ClInclude Include="Header\VirtualFile.h" />
+    <ClInclude Include="Header\WaterObj.h" />
+    <ClInclude Include="header\nfs.h" />
+    <ClInclude Include="header\nfs_data.h" />
+    <ClInclude Include="header\nfs_dt.h" />
+    <ClInclude Include="header\nfs_fat.h" />
+    <ClInclude Include="header\nfs_iio.h" />
+    <ClInclude Include="header\nfs_nt.h" />
+    <ClInclude Include="header\nfs_pmatch.h" />
+    <ClInclude Include="header\NfsVirtualFile.h" />
+    <ClInclude Include="stdafx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Header\json\json_internalarray.inl" />
+    <None Include="Header\json\json_internalmap.inl" />
+    <None Include="Header\json\json_valueiterator.inl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

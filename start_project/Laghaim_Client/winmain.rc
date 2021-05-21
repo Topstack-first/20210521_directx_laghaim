@@ -1,0 +1,382 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Korean (Korea) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+LANGUAGE LANG_KOREAN, SUBLANG_DEFAULT
+#pragma code_page(949)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "Change Device",               IDM_CHANGEDEVICE
+        MENUITEM "Save Height Map",             ID_FILE_SAVE_HEIGHT
+        MENUITEM "Save Object Map",             ID_FILE_SAVE_MAP
+        MENUITEM "E&xit",                       IDM_EXIT
+    END
+    POPUP "&Render"
+    BEGIN
+        MENUITEM "Wireframe",                   IDM_WIREFRAME, CHECKED
+        MENUITEM "View Picking Buffer",         IDM_PICKVIEW, CHECKED
+        MENUITEM "Shadow",                      IDM_VIEW_SHADOW, CHECKED
+    END
+    POPUP "&Option"
+    BEGIN
+        MENUITEM "Show Information",            IDM_SHOWSTAT, CHECKED
+        MENUITEM "Fast Movement",               IDM_FASTMOVE, CHECKED
+    END
+    POPUP "&Lighting"
+    BEGIN
+        MENUITEM "Light Source",                MENU_LIGHT_SOURCES, CHECKED
+    END
+    POPUP "&Map"
+    BEGIN
+        MENUITEM "Load New Map",                IDM_MAP_OPEN
+    END
+    POPUP "Comm"
+    BEGIN
+        MENUITEM "Connect Server",              IDM_COMM_CONNECT
+        MENUITEM "Windows Debug",               ID_COMM_WINDEBUG
+    END
+END
+
+IDR_POPUP MENU
+BEGIN
+    POPUP "File"
+    BEGIN
+        MENUITEM "E&xit",                       IDM_EXIT
+    END
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUT DIALOG 0, 0, 274, 188
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 10, "System"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,217,7,50,9
+    PUSHBUTTON      "Cancel",IDCANCEL,217,17,50,9
+    PUSHBUTTON      "Credits",IDC_BUTTON1,13,7,44,10
+    PUSHBUTTON      "RR Stats",IDC_BUTTON2,56,7,44,10
+    PUSHBUTTON      "Legal Info",IDC_BUTTON4,100,7,44,10
+END
+
+IDD_CHANGEDEVICE DIALOGEX 0, 0, 201, 84
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Switch devices"
+FONT 10, "System", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,144,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,144,24,50,14
+    GROUPBOX        "&Device selection",-1,14,7,101,28
+    COMBOBOX        IDC_DEVICE_COMBO,19,14,92,100,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Use desktop &window",IDC_WINDOWED_CHECKBOX,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,19,26,85,8
+    GROUPBOX        "Fullscreen &modes",IDC_FULLSCREEN_TEXT,13,41,101,32
+    COMBOBOX        IDC_MODE_COMBO,19,49,92,100,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "&Stereoscopic viewing",IDC_STEREO_CHECKBOX,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,19,62,75,8
+END
+
+IDD_DEV_NETLOG DIALOGEX 0, 0, 301, 241
+STYLE DS_SETFONT | WS_CHILD
+EXSTYLE WS_EX_TOOLWINDOW
+FONT 8, "µ¸¿òÃ¼", 0, 0, 0x1
+BEGIN
+    LISTBOX         IDC_LIST_COMM,5,30,145,150,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "Pause",IDPAUSE,250,220,45,14
+    LISTBOX         IDC_LIST_COMM2,150,30,145,150,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
+    LTEXT           "Server -> Client Message Log",IDC_STATIC,5,20,120,8
+    LTEXT           "Client -> Server Message Log",IDC_STATIC,145,20,135,8
+    EDITTEXT        IDC_EDITSVR,5,200,95,15,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDITCLI,150,200,95,15,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "Search",IDSRH_SVR,100,200,45,14
+    DEFPUSHBUTTON   "Search",IDSRH_CLI,250,200,45,14
+    CONTROL         "# Network Message Log",IDC_STATIC,"Static",SS_LEFTNOWORDWRAP | WS_GROUP,5,5,135,10
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,5,15,290,1
+    EDITTEXT        IDC_SELECTED,5,220,240,15,ES_AUTOHSCROLL
+    CONTROL         "Silence",IDC_CHK_SILENCE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,185,45,10
+    PUSHBUTTON      "Save",IDC_BTN_SAVE_CLI,251,183,42,12
+    PUSHBUTTON      "Save",IDC_BTN_SAVE_SVR,101,183,42,12
+END
+
+IDD_DIALOG_OBJECT DIALOG 0, 0, 167, 194
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Object List Dialog"
+FONT 10, "System"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,22,166,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,95,166,50,14
+    LISTBOX         IDC_LIST_OBJ1,12,22,142,132,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Tab1",IDC_OBJ_TAB,"SysTabControl32",0x0,7,7,153,152
+    LISTBOX         IDC_LIST_OBJ2,12,22,142,132,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_LOGIN_DLG DIALOGEX 0, 0, 116, 73
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Contact Information"
+FONT 10, "System", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,2,53,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,55,53,50,14
+    EDITTEXT        IDC_EDIT_ID,45,9,54,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PASS,45,34,55,12,ES_AUTOHSCROLL
+    LTEXT           "ID",IDC_STATIC,12,10,8,8
+    LTEXT           "Password",IDC_STATIC,13,37,33,8
+END
+
+IDD_DEV_MAIN DIALOG 0, 0, 308, 264
+STYLE DS_SETFONT | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Development Information Window"
+FONT 8, "µ¸¿òÃ¼"
+BEGIN
+    CONTROL         "Tab1",IDC_TAB1,"SysTabControl32",0x0,1,-2,305,259
+END
+
+IDD_DEV_STRING DIALOGEX 0, 0, 301, 241
+STYLE DS_SETFONT | WS_CHILD
+EXSTYLE WS_EX_TOOLWINDOW
+FONT 8, "µ¸¿òÃ¼", 0, 0, 0x1
+BEGIN
+    LISTBOX         IDC_LIST_STRING,5,30,290,205,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
+    LTEXT           "Loaded String from Dll",IDC_STATIC,5,20,120,8
+    CONTROL         "# Client String Loading Log",IDC_STATIC,"Static",SS_LEFTNOWORDWRAP | WS_GROUP,5,5,135,10
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,5,15,290,1
+END
+
+IDD_DEV_SKILL DIALOGEX 0, 0, 301, 211
+STYLE DS_SETFONT | WS_CHILD
+EXSTYLE WS_EX_TOOLWINDOW
+FONT 8, "µ¸¿òÃ¼", 0, 0, 0x1
+BEGIN
+    CONTROL         "# Skill Property",IDC_STATIC,"Static",SS_LEFTNOWORDWRAP | WS_GROUP,5,5,135,10
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,5,15,290,1
+END
+
+IDD_DEV_POINTLOG DIALOGEX 0, 0, 301, 241
+STYLE DS_SETFONT | WS_CHILD
+EXSTYLE WS_EX_TOOLWINDOW
+FONT 8, "µ¸¿òÃ¼", 0, 0, 0x1
+BEGIN
+    LISTBOX         IDC_POINTLOG_LIST,7,22,286,161,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
+    CONTROL         "# Point Log",IDC_STATIC,"Static",SS_LEFTNOWORDWRAP | WS_GROUP,5,5,135,10
+    DEFPUSHBUTTON   "¢º EXP Start",ID_EXP,104,193,92,18
+    DEFPUSHBUTTON   "¢º Damage Start",ID_DAMAGE,7,193,92,18
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,5,15,290,1
+    DEFPUSHBUTTON   "¢º Lime Start",ID_LIME,201,193,92,18
+    DEFPUSHBUTTON   "¡á Pause",ID_POINTLOG_PAUSE,7,215,140,18
+    DEFPUSHBUTTON   "Log All Save",ID_POINTLOG_ALL_SAVE,153,215,140,18
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 267
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 181
+    END
+
+    IDD_CHANGEDEVICE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 194
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 77
+    END
+
+    IDD_DEV_NETLOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 293
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 233
+    END
+
+    IDD_DIALOG_OBJECT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 160
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 187
+    END
+
+    IDD_LOGIN_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+        RIGHTMARGIN, 112
+        TOPMARGIN, 2
+        BOTTOMMARGIN, 67
+    END
+
+    IDD_DEV_MAIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 301
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 257
+    END
+
+    IDD_DEV_STRING, DIALOG
+    BEGIN
+        RIGHTMARGIN, 293
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 233
+    END
+
+    IDD_DEV_SKILL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 293
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 203
+    END
+
+    IDD_DEV_POINTLOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 293
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 233
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_CURSOR1             CURSOR                  "cursor1.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_MAIN_ICON           ICON                    "Laghaim.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 2,0,0,0
+ PRODUCTVERSION 2,0,0,1
+ FILEFLAGSMASK 0x17L
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040004b0"
+        BEGIN
+            VALUE "CompanyName", "Online Gamming"
+            VALUE "FileDescription", "LaghaimOnline New"
+            VALUE "FileVersion", "2, 0, 0, 0"
+            VALUE "LegalCopyright", "Copyright¨Ï. All Rights Reserved"
+            VALUE "OriginalFilename", "Game.exe"
+            VALUE "ProductName", "LaghaimOnline New"
+            VALUE "ProductVersion", "2, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x400, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_OBJTAB1             "Buildings"
+    IDS_OBJTAB2             "Etc"
+    IDS_STRING3             "Test"
+END
+
+#endif    // Korean (Korea) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

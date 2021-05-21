@@ -1,0 +1,4 @@
+#ifndef _ERRORCODE_DEFINE_H_
+#define _ERRORCODE_DEFINE_H_
+
+#endif // _ERRORCODE_DEFINE_H_
