@@ -183,6 +183,9 @@
 using namespace Gdiplus;
 #include <gdiplusimaging.h>
 #include "SplashWnd.h"
+
+
+
 #pragma warning( disable : 4995 )
 
 //////////////////////////////////////////////////////////////////////////
@@ -999,10 +1002,32 @@ void CMyD3DApplication::Init()
 	// Pick Buffer
 	m_pddsPickRender = NULL;
 	m_pddsPickZBuffer = NULL;
-	m_pickMesh[0] = D3DTLVERTEX(D3DVECTOR(0, 10, 0.098f), 1, 0, 0, 0.0f, 1.0f);
-	m_pickMesh[1] = D3DTLVERTEX(D3DVECTOR(0, 0, 0.098f), 1, 0, 0, 0.0f, 0.0f);
-	m_pickMesh[2] = D3DTLVERTEX(D3DVECTOR(10, 10, 0.098f), 1, 0, 0, 1.0f, 1.0f);
-	m_pickMesh[3] = D3DTLVERTEX(D3DVECTOR(10, 0, 0.098f), 1, 0, 0, 1.0f, 0.0f);
+
+	D3DVECTOR d3dVector1;
+	d3dVector1.x = 0;
+	d3dVector1.y = 10.0;
+	d3dVector1.z = 0.098;
+
+	D3DVECTOR d3dVector2;
+	d3dVector2.x = 0;
+	d3dVector2.y = 0;
+	d3dVector2.z = 0.098;
+
+	D3DVECTOR d3dVector3;
+	d3dVector3.x = 10;
+	d3dVector3.y = 10.0;
+	d3dVector3.z = 0.098;
+
+	D3DVECTOR d3dVector4;
+	d3dVector4.x = 10;
+	d3dVector4.y = 0;
+	d3dVector4.z = 0.098;
+
+	m_pickMesh[0] = D3DTLVERTEX(d3dVector1, 1, 0, 0, 0.0f, 1.0f);
+	m_pickMesh[1] = D3DTLVERTEX(d3dVector2, 1, 0, 0, 0.0f, 0.0f);
+	m_pickMesh[2] = D3DTLVERTEX(d3dVector3, 1, 0, 0, 1.0f, 1.0f);
+	m_pickMesh[3] = D3DTLVERTEX(d3dVector4, 1, 0, 0, 1.0f, 0.0f);
+
 	m_nShowRohEnerge = 0;
 	m_bRohRunning = TRUE;
 	m_startRunningTime = timeGetTime();
@@ -2093,9 +2118,9 @@ void CMyD3DApplication::InitVariables()
 	}
 
 	// 카메라 초기 위치 설정
-	m_vEye = D3DVECTOR(0, 100.0f, -100.0f);
-	m_vAt = D3DVECTOR(0, 0, 0);
-	m_vUp = D3DVECTOR(0, 1, 0);
+	m_vEye = D3DVECTOR_New(0, 100.0f, -100.0f);
+	m_vAt = D3DVECTOR_New(0, 0, 0);
+	m_vUp = D3DVECTOR_New(0, 1, 0);
 	SetViewParams( &m_vEye, &m_vAt, &m_vUp, 0.2f );
 	// 새로운 카메라 인터페이스를 위해서
 	m_vEyeZ.x = m_matView._13;
@@ -3228,25 +3253,36 @@ BOOL CMyD3DApplication::LoadGameResources()
 
 	// 구름 메쉬
 	// Initialize the tree and background meshes
-	m_CloudMesh[0] = D3DTLVERTEX( D3DVECTOR(0,0,0.99999f), 1.0f, 0xFF999999, 0, 0, 1 );
-	m_CloudMesh[1] = D3DTLVERTEX( D3DVECTOR(0,0,0.99999f), 1.0f, 0xFF999999, 0, 0, 0 );
-	m_CloudMesh[2] = D3DTLVERTEX( D3DVECTOR(0,0,0.99999f), 1.0f, 0xFF999999, 0, 1, 1 );
-	m_CloudMesh[3] = D3DTLVERTEX( D3DVECTOR(0,0,0.99999f), 1.0f, 0xFF999999, 0, 1, 0 );
 
-	m_CloudLayerMesh[0] = D3DTLVERTEX( D3DVECTOR(0,0,0.999f), 1.0f, 0x00300668, 0, 0, 1 );
-	m_CloudLayerMesh[1] = D3DTLVERTEX( D3DVECTOR(0,0,0.999f), 1.0f, 0x00300668, 0, 0, 0 );
-	m_CloudLayerMesh[2] = D3DTLVERTEX( D3DVECTOR(0,0,0.999f), 1.0f, 0x00300668, 0, 1, 1 );
-	m_CloudLayerMesh[3] = D3DTLVERTEX( D3DVECTOR(0,0,0.999f), 1.0f, 0x00300668, 0, 1, 0 );
+	D3DVECTOR d3dVector;
+	d3dVector.x = 0;
+	d3dVector.y = 0;
+	d3dVector.z = 0.99999f;
 
-	TLVec[0] = D3DTLVERTEX( D3DVECTOR(0,0,0.99999f), 1.0f, 0xFF999999, 0, 0, 1 );
-	TLVec[1] = D3DTLVERTEX( D3DVECTOR(0,0,0.99999f), 1.0f, 0xFF999999, 0, 0, 0 );
-	TLVec[2] = D3DTLVERTEX( D3DVECTOR(0,0,0.99999f), 1.0f, 0xFF999999, 0, 1, 1 );
-	TLVec[3] = D3DTLVERTEX( D3DVECTOR(0,0,0.99999f), 1.0f, 0xFF999999, 0, 1, 0 );
+	D3DVECTOR d3dVector4;
+	d3dVector4.x = 0;
+	d3dVector4.y = 0;
+	d3dVector4.z = 0.999f;
 
-	TLVec2[0] = D3DTLVERTEX( D3DVECTOR(0,0,0.99999f), 1.0f, 0xFF999999, 0, 0, 1 );
-	TLVec2[1] = D3DTLVERTEX( D3DVECTOR(0,0,0.99999f), 1.0f, 0xFF999999, 0, 0, 0 );
-	TLVec2[2] = D3DTLVERTEX( D3DVECTOR(0,0,0.99999f), 1.0f, 0xFF999999, 0, 1, 1 );
-	TLVec2[3] = D3DTLVERTEX( D3DVECTOR(0,0,0.99999f), 1.0f, 0xFF999999, 0, 1, 0 );
+	m_CloudMesh[0] = D3DTLVERTEX( d3dVector, 1.0f, 0xFF999999, 0, 0, 1 );
+	m_CloudMesh[1] = D3DTLVERTEX( d3dVector, 1.0f, 0xFF999999, 0, 0, 0 );
+	m_CloudMesh[2] = D3DTLVERTEX( d3dVector, 1.0f, 0xFF999999, 0, 1, 1 );
+	m_CloudMesh[3] = D3DTLVERTEX( d3dVector, 1.0f, 0xFF999999, 0, 1, 0 );
+
+	m_CloudLayerMesh[0] = D3DTLVERTEX( d3dVector4, 1.0f, 0x00300668, 0, 0, 1 );
+	m_CloudLayerMesh[1] = D3DTLVERTEX( d3dVector4, 1.0f, 0x00300668, 0, 0, 0 );
+	m_CloudLayerMesh[2] = D3DTLVERTEX( d3dVector4, 1.0f, 0x00300668, 0, 1, 1 );
+	m_CloudLayerMesh[3] = D3DTLVERTEX( d3dVector4, 1.0f, 0x00300668, 0, 1, 0 );
+
+	TLVec[0] = D3DTLVERTEX( d3dVector, 1.0f, 0xFF999999, 0, 0, 1 );
+	TLVec[1] = D3DTLVERTEX( d3dVector, 1.0f, 0xFF999999, 0, 0, 0 );
+	TLVec[2] = D3DTLVERTEX( d3dVector, 1.0f, 0xFF999999, 0, 1, 1 );
+	TLVec[3] = D3DTLVERTEX( d3dVector, 1.0f, 0xFF999999, 0, 1, 0 );
+
+	TLVec2[0] = D3DTLVERTEX( d3dVector, 1.0f, 0xFF999999, 0, 0, 1 );
+	TLVec2[1] = D3DTLVERTEX( d3dVector, 1.0f, 0xFF999999, 0, 0, 0 );
+	TLVec2[2] = D3DTLVERTEX( d3dVector, 1.0f, 0xFF999999, 0, 1, 1 );
+	TLVec2[3] = D3DTLVERTEX( d3dVector, 1.0f, 0xFF999999, 0, 1, 0 );
 
 	EffectSort ef_sort;
 	ZeroMemory(&ef_sort, sizeof(EffectSort));
@@ -4424,14 +4460,14 @@ void CMyD3DApplication::Read_ChooseMode(char *filename)
 HRESULT CMyD3DApplication::OneTimeSceneInit()
 {
 	// 눈이 바라보고 있는 곳.
-	m_Origin[0] = D3DLVERTEX(D3DVECTOR( 5.0f,0.0f,-5.0f),0x00ffffff,0,0,0);
-	m_Origin[1] = D3DLVERTEX(D3DVECTOR(-5.0f,0.0f,-5.0f),0x00ffffff,0,0,0);
-	m_Origin[2] = D3DLVERTEX(D3DVECTOR(-5.0f,10.0f,-5.0f),0x00ffffff,0,0,0);
-	m_Origin[3] = D3DLVERTEX(D3DVECTOR( 5.0f,10.0f,-5.0f),0x00ffffff,0,0,0);
-	m_Origin[4] = D3DLVERTEX(D3DVECTOR( 5.0f,0.0f, 5.0f),0x00ffffff,0,0,0);
-	m_Origin[5] = D3DLVERTEX(D3DVECTOR(-5.0f,0.0f, 5.0f),0x00ffffff,0,0,0);
-	m_Origin[6] = D3DLVERTEX(D3DVECTOR(-5.0f,10.0f, 5.0f),0x00ffffff,0,0,0);
-	m_Origin[7] = D3DLVERTEX(D3DVECTOR( 5.0f,10.0f, 5.0f),0x00ffff00,0,0,0);
+	///m_Origin[0] = D3DLVERTEX(D3DVECTOR_New( 5.0f,0.0f,-5.0f),0x00ffffff,0,0,0);
+	///m_Origin[1] = D3DLVERTEX(D3DVECTOR_New(-5.0f,0.0f,-5.0f),0x00ffffff,0,0,0);
+	///m_Origin[2] = D3DLVERTEX(D3DVECTOR_New(-5.0f,10.0f,-5.0f),0x00ffffff,0,0,0);
+	///m_Origin[3] = D3DLVERTEX(D3DVECTOR_New( 5.0f,10.0f,-5.0f),0x00ffffff,0,0,0);
+	///m_Origin[4] = D3DLVERTEX(D3DVECTOR_New( 5.0f,0.0f, 5.0f),0x00ffffff,0,0,0);
+	///m_Origin[5] = D3DLVERTEX(D3DVECTOR_New(-5.0f,0.0f, 5.0f),0x00ffffff,0,0,0);
+	///m_Origin[6] = D3DLVERTEX(D3DVECTOR_New(-5.0f,10.0f, 5.0f),0x00ffffff,0,0,0);
+	///m_Origin[7] = D3DLVERTEX(D3DVECTOR_New( 5.0f,10.0f, 5.0f),0x00ffff00,0,0,0);
 
 	// 인덱스
 	m_idxOrigin[0] = 0;
@@ -4484,9 +4520,9 @@ HRESULT CMyD3DApplication::FrameMove( FLOAT fTimeKey )
 	if (m_bSatelliteMode)
 	{
 		D3DVECTOR	from, at, up;
-		from = D3DVECTOR(g_pRoh->m_wx, 250.0f, g_pRoh->m_wz);
-		at = D3DVECTOR(g_pRoh->m_wx, 0.0f, g_pRoh->m_wz);
-		up = D3DVECTOR(0.0f, 1.0f, 0.0f);
+		from = D3DVECTOR_New(g_pRoh->m_wx, 250.0f, g_pRoh->m_wz);
+		at = D3DVECTOR_New(g_pRoh->m_wx, 0.0f, g_pRoh->m_wz);
+		up = D3DVECTOR_New(0.0f, 1.0f, 0.0f);
 		D3DUtil_SetViewMatrix(m_matVirView, from, at, up);
 		m_pd3dDevice->SetTransform( D3DTRANSFORMSTATE_VIEW, &m_matVirView );
 		m_pd3dDevicePick->SetTransform( D3DTRANSFORMSTATE_VIEW, &m_matVirView );
@@ -4530,7 +4566,7 @@ HRESULT CMyD3DApplication::FrameMove( FLOAT fTimeKey )
 
 	if (g_pDSound)
 	{
-		D3DVECTOR vPlayer = D3DVECTOR(g_pRoh->m_wx, g_pRoh->m_wy, g_pRoh->m_wz);
+		D3DVECTOR vPlayer = D3DVECTOR_New(g_pRoh->m_wx, g_pRoh->m_wy, g_pRoh->m_wz);
 		g_pDSound->AdjustSoundSourceDirMatrix(m_vEye, vPlayer);
 
 		D3DVECTOR vDir;
@@ -4594,7 +4630,8 @@ HRESULT CMyD3DApplication::Render()
 			m_bPickBegin = TRUE;
 			m_pd3dDevicePick->SetTexture(0, NULL);
 			m_pd3dDevicePick->SetRenderState(D3DRENDERSTATE_LIGHTING, FALSE);
-			m_pd3dDevicePick->DrawPrimitive(D3DPT_TRIANGLESTRIP, D3DFVF_TLVERTEX, m_pickMesh, 4, 0 );
+			///m_pd3dDevicePick->DrawPrimitive(D3DPT_TRIANGLESTRIP, D3DFVF_TLVERTEX, m_pickMesh, 4, 0 );
+			m_pd3dDevicePick->DrawPrimitive(D3DPT_TRIANGLESTRIP,  4, 0);
 			m_pd3dDevicePick->SetRenderState(D3DRENDERSTATE_LIGHTING, TRUE);
 		}
 		else
@@ -4694,10 +4731,10 @@ HRESULT CMyD3DApplication::Render()
 			D3DVECTOR *pviewVolumeVector = m_pFrustum->GetFrustumPoints();
 			D3DVERTEX Line[4];
 
-			Line[0] = D3DVERTEX(m_vEye, D3DVECTOR(0.0f, 1.0f, 0.0f), 0.0f, 0.0f);
-			Line[1] = D3DVERTEX(pviewVolumeVector[0], D3DVECTOR(0.0f, 1.0f, 0.0f), 0.0f, 0.0f);
-			Line[2] = D3DVERTEX(m_vEye, D3DVECTOR(0.0f, 1.0f, 0.0f), 0.0f, 0.0f);
-			Line[3] = D3DVERTEX(pviewVolumeVector[1], D3DVECTOR(0.0f, 1.0f, 0.0f), 0.0f, 0.0f);
+			Line[0] = D3DVERTEX(m_vEye, D3DVECTOR_New(0.0f, 1.0f, 0.0f), 0.0f, 0.0f);
+			Line[1] = D3DVERTEX(pviewVolumeVector[0], D3DVECTOR_New(0.0f, 1.0f, 0.0f), 0.0f, 0.0f);
+			Line[2] = D3DVERTEX(m_vEye, D3DVECTOR_New(0.0f, 1.0f, 0.0f), 0.0f, 0.0f);
+			Line[3] = D3DVERTEX(pviewVolumeVector[1], D3DVECTOR_New(0.0f, 1.0f, 0.0f), 0.0f, 0.0f);
 
 			m_pd3dDevice->SetRenderState(D3DRENDERSTATE_CLIPPING , FALSE);
 			m_pd3dDevice->DrawPrimitive(D3DPT_LINELIST, D3DFVF_LVERTEX, Line, 4, 0);
@@ -4791,7 +4828,7 @@ HRESULT CMyD3DApplication::Render()
 
 		if (m_pCompas && !g_pNk2DFrame->CheckFullScreenInterface() )
 		{
-			D3DVECTOR vPlayer = D3DVECTOR(g_pRoh->m_wx, g_pRoh->m_wy, g_pRoh->m_wz);
+			D3DVECTOR vPlayer = D3DVECTOR_New(g_pRoh->m_wx, g_pRoh->m_wy, g_pRoh->m_wz);
 			m_pCompas->CalDirection(m_vEye, vPlayer);
 
 			if( g_SvrType == ST_ADULT_ONLY )
@@ -5150,10 +5187,10 @@ HRESULT CMyD3DApplication::Render()
 						m_pd3dDevice->SetRenderState(D3DRENDERSTATE_SRCBLEND, D3DBLEND_SRCALPHA);
 						m_pd3dDevice->SetRenderState(D3DRENDERSTATE_DESTBLEND, D3DBLEND_INVSRCALPHA);
 
-						TLVec[0] = D3DTLVERTEX(D3DVECTOR( DrawWidth-20, DrawHeight+TempTextOut.GetBoxHeight()+18, 0), 1, 0xffffffff, 0, 0, 1.0f );
-						TLVec[1] = D3DTLVERTEX(D3DVECTOR( DrawWidth-20, DrawHeight-20, 0), 1, 0xffffffff, 0, 0, 0 );
-						TLVec[2] = D3DTLVERTEX(D3DVECTOR( DrawWidth+TempTextOut.GetBoxWidth()+20, DrawHeight-20, 0), 1, 0xffffffff, 0, 1.0f, 0 );
-						TLVec[3] = D3DTLVERTEX(D3DVECTOR( DrawWidth+TempTextOut.GetBoxWidth()+20,  DrawHeight+TempTextOut.GetBoxHeight()+18, 0), 1, 0xffffffff, 0, 1.0f, 1.0f );
+						TLVec[0] = D3DTLVERTEX(D3DVECTOR_New( DrawWidth-20, DrawHeight+TempTextOut.GetBoxHeight()+18, 0), 1, 0xffffffff, 0, 0, 1.0f );
+						TLVec[1] = D3DTLVERTEX(D3DVECTOR_New( DrawWidth-20, DrawHeight-20, 0), 1, 0xffffffff, 0, 0, 0 );
+						TLVec[2] = D3DTLVERTEX(D3DVECTOR_New( DrawWidth+TempTextOut.GetBoxWidth()+20, DrawHeight-20, 0), 1, 0xffffffff, 0, 1.0f, 0 );
+						TLVec[3] = D3DTLVERTEX(D3DVECTOR_New( DrawWidth+TempTextOut.GetBoxWidth()+20,  DrawHeight+TempTextOut.GetBoxHeight()+18, 0), 1, 0xffffffff, 0, 1.0f, 1.0f );
 
 						m_pd3dDevice->SetTexture(0, g_pCapsyongTexture->GetSurfaceByIdx(g_EffectTextr[EFF_FX_HEAL_LIGHT]) );
 						m_pd3dDevice->DrawPrimitive(D3DPT_TRIANGLEFAN    , D3DFVF_TLVERTEX, TLVec, 4, 0);
@@ -6979,7 +7016,7 @@ void CMyD3DApplication::SetCameraInitPos(D3DVECTOR &vFrom, D3DVECTOR &vAt)
 }
 void CMyD3DApplication::SituationEye(D3DMATRIX &m, D3DVECTOR &eye, D3DVECTOR &eye_z, D3DVECTOR &eye_y)
 {
-	D3DVECTOR vUp = D3DVECTOR(0, 1, 0);
+	D3DVECTOR vUp = D3DVECTOR_New(0, 1, 0);
 	D3DVECTOR eye_x = CrossProduct(vUp, eye_z);
 	eye_y = CrossProduct(eye_z, eye_x);
 
@@ -7203,7 +7240,7 @@ void CMyD3DApplication::RotateCamera(POINT ptOld, int mx, int my)
 		float fDownAngle = 0.0f;			// 회전 제한 각도
 
 		// end
-		vec = D3DVECTOR(0.0f, 1.0f, 0.0f);
+		vec = D3DVECTOR_New(0.0f, 1.0f, 0.0f);
 		// 시선벡터를 원점에 놓는다.
 		m_vEye -= m_vAt;
 		eye_x = CrossProduct(vec, m_vEyeZ);
@@ -7597,34 +7634,34 @@ void CMyD3DApplication::SetHeroInitPos(float x, float y, float z, float dir, BOO
 
 		if (g_bDungeon)
 		{
-			from = D3DVECTOR(g_pRoh->m_wx, g_pRoh->m_wy + 90.0f, g_pRoh->m_wz-90.0f);
-			at = D3DVECTOR(g_pRoh->m_wx, g_pRoh->m_wy+m_fAtHeight, g_pRoh->m_wz);
+			from = D3DVECTOR_New(g_pRoh->m_wx, g_pRoh->m_wy + 90.0f, g_pRoh->m_wz-90.0f);
+			at = D3DVECTOR_New(g_pRoh->m_wx, g_pRoh->m_wy+m_fAtHeight, g_pRoh->m_wz);
 		}
 		else
 		{
 			// 처음 게임에 접속했을때의 시점.
 			if (bFirst)
 			{
-				from = D3DVECTOR(g_pRoh->m_wx, g_pRoh->m_wy + 70.0f, g_pRoh->m_wz-100.0f);
-				at = D3DVECTOR(g_pRoh->m_wx, g_pRoh->m_wy+m_fAtHeight, g_pRoh->m_wz);
+				from = D3DVECTOR_New(g_pRoh->m_wx, g_pRoh->m_wy + 70.0f, g_pRoh->m_wz-100.0f);
+				at = D3DVECTOR_New(g_pRoh->m_wx, g_pRoh->m_wy+m_fAtHeight, g_pRoh->m_wz);
 				m_Fov = 0.45f;
 				g_pRoh->m_dir = g_pRoh->m_toDir = g_PI+g_PI_DIV_2;
 				bFirst = FALSE;
 			}
 			else if (g_dwClientCountry == 0 || g_dwLangType == 0)
 			{
-				from = D3DVECTOR(g_pRoh->m_wx, g_pRoh->m_wy + 50.0f, g_pRoh->m_wz-100.0f);
-				at = D3DVECTOR(g_pRoh->m_wx, g_pRoh->m_wy+m_fAtHeight, g_pRoh->m_wz);
+				from = D3DVECTOR_New(g_pRoh->m_wx, g_pRoh->m_wy + 50.0f, g_pRoh->m_wz-100.0f);
+				at = D3DVECTOR_New(g_pRoh->m_wx, g_pRoh->m_wy+m_fAtHeight, g_pRoh->m_wz);
 			}
 			else if (g_dwClientCountry == 1)
 			{
-				from = D3DVECTOR(g_pRoh->m_wx, g_pRoh->m_wy + 50.0f, g_pRoh->m_wz-100.0f);
-				at = D3DVECTOR(g_pRoh->m_wx, g_pRoh->m_wy+m_fAtHeight, g_pRoh->m_wz);
+				from = D3DVECTOR_New(g_pRoh->m_wx, g_pRoh->m_wy + 50.0f, g_pRoh->m_wz-100.0f);
+				at = D3DVECTOR_New(g_pRoh->m_wx, g_pRoh->m_wy+m_fAtHeight, g_pRoh->m_wz);
 			}
 			else
 			{
-				from = D3DVECTOR(g_pRoh->m_wx, g_pRoh->m_wy + 50.0f, g_pRoh->m_wz-100.0f);
-				at = D3DVECTOR(g_pRoh->m_wx, g_pRoh->m_wy+m_fAtHeight, g_pRoh->m_wz);
+				from = D3DVECTOR_New(g_pRoh->m_wx, g_pRoh->m_wy + 50.0f, g_pRoh->m_wz-100.0f);
+				at = D3DVECTOR_New(g_pRoh->m_wx, g_pRoh->m_wy+m_fAtHeight, g_pRoh->m_wz);
 			}
 		}
 	}
@@ -7664,7 +7701,7 @@ void CMyD3DApplication::SetHeroInitPos(float x, float y, float z, float dir, BOO
 		g_pRoh->m_toDir = dir;
 		g_pRoh->m_bCrystalOwner = FALSE;
 
-		from = D3DVECTOR(m_vEye.x + diff_x, m_vEye.y + diff_y , m_vEye.z + diff_z);
+		from = D3DVECTOR_New(m_vEye.x + diff_x, m_vEye.y + diff_y , m_vEye.z + diff_z);
 		float	fWaterHeight;
 		if( g_bNewTerrain )
 			fWaterHeight = CNKObjQuadNode::GetHeightOnWater( g_pRoh->m_wz, g_pRoh->m_wx );
@@ -7672,11 +7709,11 @@ void CMyD3DApplication::SetHeroInitPos(float x, float y, float z, float dir, BOO
 			fWaterHeight = WATER_HEIGHT;
 		if( g_pRoh->m_wy < fWaterHeight )
 		{
-			at = D3DVECTOR( g_pRoh->m_wx, fWaterHeight+m_fAtHeight, g_pRoh->m_wz );
+			at = D3DVECTOR_New( g_pRoh->m_wx, fWaterHeight+m_fAtHeight, g_pRoh->m_wz );
 			from.y = at.y + m_fCamHeight;
 		}
 		else
-			at = D3DVECTOR( g_pRoh->m_wx, g_pRoh->m_wy+m_fAtHeight, g_pRoh->m_wz );
+			at = D3DVECTOR_New( g_pRoh->m_wx, g_pRoh->m_wy+m_fAtHeight, g_pRoh->m_wz );
 	}
 	// 카메라 위치 설정
 	SetCameraInitPos(from, at);
@@ -12989,7 +13026,7 @@ void CMyD3DApplication::ShowRohEnergeBar()
 				if (energe < 0)
 					energe = 0;
 
-				vWorld = D3DVECTOR(m_pMyPet->m_wx, m_pMyPet->m_wy-0.0f, m_pMyPet->m_wz);
+				vWorld = D3DVECTOR_New(m_pMyPet->m_wx, m_pMyPet->m_wy-0.0f, m_pMyPet->m_wz);
 
 				// 편의상 CLand의 기능을 쓴다.
 				if( m_pUIMgr->m_pLand )
@@ -13061,7 +13098,7 @@ void CMyD3DApplication::ShowRohEnergeBar()
 			if (energe < 0)
 				energe = 0;
 
-			vWorld = D3DVECTOR(g_pRoh->m_wx, g_pRoh->m_wy-0.0f, g_pRoh->m_wz);
+			vWorld = D3DVECTOR_New(g_pRoh->m_wx, g_pRoh->m_wy-0.0f, g_pRoh->m_wz);
 			// 편의상 CLand의 기능을 쓴다.
 			if( m_pUIMgr->m_pLand )
 				m_pUIMgr->m_pLand->GetPipelineMatrix(matPipe);
@@ -13171,8 +13208,8 @@ int CMyD3DApplication::DisplayPartyVital(CNkCharacter * p, float perVital)
 	if(perVital <=0)
 		perVital = 1;
 	
-	//vWorld = D3DVECTOR(p->m_wx, p->m_wy+23.0f, p->m_wz);
-	vWorld = D3DVECTOR(p->m_wx, p->m_wy-0.0f, p->m_wz);
+	//vWorld = D3DVECTOR_New(p->m_wx, p->m_wy+23.0f, p->m_wz);
+	vWorld = D3DVECTOR_New(p->m_wx, p->m_wy-0.0f, p->m_wz);
 	// 편의상 CLand의 기능을 쓴다.
 	if( m_pUIMgr->m_pLand )
 		m_pUIMgr->m_pLand->GetPipelineMatrix(matPipe);
@@ -13220,7 +13257,7 @@ int CMyD3DApplication::DisplayPartyVital(CNkCharacter * p, float perVital)
 	if(perVital <=0)
 		perVital = 1;
 
-	vWorld = D3DVECTOR(p->m_wx, p->m_wy+30.0f, p->m_wz); //30.0f
+	vWorld = D3DVECTOR_New(p->m_wx, p->m_wy+30.0f, p->m_wz); //30.0f
 	if(!m_pUIMgr)return 0;
 	if( m_pUIMgr->m_pLand )
 		m_pUIMgr->m_pLand->GetPipelineMatrix(matPipe);
@@ -13267,7 +13304,7 @@ int CMyD3DApplication::DisplaySummonVital(CNkMob *pMob)
 	if( pMob->m_Vital<=0)
 		pMob->m_Vital= 1;
 
-	vWorld = D3DVECTOR(pMob->m_wx, pMob->m_wy-0.0f, pMob->m_wz);
+	vWorld = D3DVECTOR_New(pMob->m_wx, pMob->m_wy-0.0f, pMob->m_wz);
 	// 편의상 CLand의 기능을 쓴다.
 	if( m_pUIMgr->m_pLand )
 		m_pUIMgr->m_pLand->GetPipelineMatrix(matPipe);
@@ -13317,7 +13354,7 @@ int CMyD3DApplication::DisplayDivineVital(CNkMob *pMob)
 	if( pMob->m_Vital<=0)
 		pMob->m_Vital= 1;
 
-	vWorld = D3DVECTOR(pMob->m_wx, pMob->m_wy-0.0f, pMob->m_wz);
+	vWorld = D3DVECTOR_New(pMob->m_wx, pMob->m_wy-0.0f, pMob->m_wz);
 	// 편의상 CLand의 기능을 쓴다.
 	if( m_pUIMgr->m_pLand )
 		m_pUIMgr->m_pLand->GetPipelineMatrix(matPipe);
@@ -13421,15 +13458,15 @@ void CMyD3DApplication::RenderOthersVital(int x, int y, int cx, int cy, int x2, 
 	vpNew.dwHeight = screenCy;
 	m_pd3dDevice->SetViewport(&vpNew);
 
-	TLVec3[0] = D3DTLVERTEX(D3DVECTOR(x,    y,      0), 1, barcolor, 0, 0, 0);
-	TLVec3[1] = D3DTLVERTEX(D3DVECTOR(x+cx, y,     0), 1, barcolor, 0, 1, 0);
-	TLVec3[2] = D3DTLVERTEX(D3DVECTOR(x,    y+cy,  0), 1, barcolor, 0, 0, 1);
-	TLVec3[3] = D3DTLVERTEX(D3DVECTOR(x+cx, y+cy,  0), 1, barcolor, 0, 1, 1);
+	TLVec3[0] = D3DTLVERTEX(D3DVECTOR_New(x,    y,      0), 1, barcolor, 0, 0, 0);
+	TLVec3[1] = D3DTLVERTEX(D3DVECTOR_New(x+cx, y,     0), 1, barcolor, 0, 1, 0);
+	TLVec3[2] = D3DTLVERTEX(D3DVECTOR_New(x,    y+cy,  0), 1, barcolor, 0, 0, 1);
+	TLVec3[3] = D3DTLVERTEX(D3DVECTOR_New(x+cx, y+cy,  0), 1, barcolor, 0, 1, 1);
 
-	TLVec4[0] = D3DTLVERTEX(D3DVECTOR(x2,	  y2,      0), 1, 0xfffffff, 0, 0, 0);
-	TLVec4[1] = D3DTLVERTEX(D3DVECTOR(x2+cx2, y2,     0), 1, 0xfffffff, 0, 1, 0);
-	TLVec4[2] = D3DTLVERTEX(D3DVECTOR(x2,     y2+cy2,  0), 1, 0xfffffff, 0, 0, 1);
-	TLVec4[3] = D3DTLVERTEX(D3DVECTOR(x2+cx2, y2+cy2,  0), 1, 0xfffffff, 0, 1, 1);
+	TLVec4[0] = D3DTLVERTEX(D3DVECTOR_New(x2,	  y2,      0), 1, 0xfffffff, 0, 0, 0);
+	TLVec4[1] = D3DTLVERTEX(D3DVECTOR_New(x2+cx2, y2,     0), 1, 0xfffffff, 0, 1, 0);
+	TLVec4[2] = D3DTLVERTEX(D3DVECTOR_New(x2,     y2+cy2,  0), 1, 0xfffffff, 0, 0, 1);
+	TLVec4[3] = D3DTLVERTEX(D3DVECTOR_New(x2+cx2, y2+cy2,  0), 1, 0xfffffff, 0, 1, 1);
 
 	DWORD dwState[5];
 	// 라이팅
@@ -13477,7 +13514,7 @@ void CMyD3DApplication::DisplayChaHitpoints(CNkCharacter *pCha)
 	if(!pCha)
 		return;
 	
-	vWorld = D3DVECTOR(pCha->m_wx, pCha->m_wy-0.0f, pCha->m_wz);
+	vWorld = D3DVECTOR_New(pCha->m_wx, pCha->m_wy-0.0f, pCha->m_wz);
 	if( m_pUIMgr->m_pLand )
 		m_pUIMgr->m_pLand->GetPipelineMatrix(matPipe);
 	D3DMath_VectorMatrixMultiply(vScr, vWorld, matPipe);
@@ -13509,7 +13546,7 @@ void CMyD3DApplication::DisplayMobHitpoints(CNkMob *pMob)
 	if(!pMob)
 		return;
 
-	vWorld = D3DVECTOR(pMob->m_wx, pMob->m_wy-0.0f, pMob->m_wz);
+	vWorld = D3DVECTOR_New(pMob->m_wx, pMob->m_wy-0.0f, pMob->m_wz);
 	if( m_pUIMgr->m_pLand )
 		m_pUIMgr->m_pLand->GetPipelineMatrix(matPipe);
 	D3DMath_VectorMatrixMultiply(vScr, vWorld, matPipe);
@@ -13649,10 +13686,10 @@ void CMyD3DApplication::RenderHitPoints(int x, int y, DWORD kind, DWORD attacker
 	{
 		if(amount[i])
 		{
-			TLVec4[0] = D3DTLVERTEX(D3DVECTOR(x2+(width*j),	  y2,      0), 1, D3DRGBA( 1.0f, 1.0f, 1.0f, 1.0f ), 0, 0, 0);
-			TLVec4[1] = D3DTLVERTEX(D3DVECTOR(x2+width+(width*j), y2,     0), 1, D3DRGBA( 1.0f, 1.0f, 1.0f, 1.0f ), 0, 1, 0);
-			TLVec4[2] = D3DTLVERTEX(D3DVECTOR(x2+(width*j),     y2+height,  0), 1, D3DRGBA( 1.0f, 1.0f, 1.0f, 1.0f ), 0, 0, 1);
-			TLVec4[3] = D3DTLVERTEX(D3DVECTOR(x2+width+(width*j), y2+height,  0), 1, D3DRGBA( 1.0f, 1.0f, 1.0f, 1.0f ), 0, 1, 1);
+			TLVec4[0] = D3DTLVERTEX(D3DVECTOR_New(x2+(width*j),	  y2,      0), 1, D3DRGBA( 1.0f, 1.0f, 1.0f, 1.0f ), 0, 0, 0);
+			TLVec4[1] = D3DTLVERTEX(D3DVECTOR_New(x2+width+(width*j), y2,     0), 1, D3DRGBA( 1.0f, 1.0f, 1.0f, 1.0f ), 0, 1, 0);
+			TLVec4[2] = D3DTLVERTEX(D3DVECTOR_New(x2+(width*j),     y2+height,  0), 1, D3DRGBA( 1.0f, 1.0f, 1.0f, 1.0f ), 0, 0, 1);
+			TLVec4[3] = D3DTLVERTEX(D3DVECTOR_New(x2+width+(width*j), y2+height,  0), 1, D3DRGBA( 1.0f, 1.0f, 1.0f, 1.0f ), 0, 1, 1);
 			int idx = 0;
 			if(attacker == g_pRoh->m_nCharIndex)
 				idx = EFF_NUMBER_10 + (amount[i]- 0x30);
@@ -13876,10 +13913,10 @@ void CMyD3DApplication::RenderCutton()
 
 	m_pd3dDevice->GetViewport(&vp);
 
-	tlVtx[0] = D3DTLVERTEX(D3DVECTOR(0,    vp.dwHeight,     0), 1, 0x00ffffff, 0, 0.0f, 1.0f);
-	tlVtx[1] = D3DTLVERTEX(D3DVECTOR(0,    0,     0), 1, 0x00ffffff, 0, 0.0f, 0.0f);
-	tlVtx[2] = D3DTLVERTEX(D3DVECTOR(vp.dwWidth,   vp.dwHeight,     0), 1, 0x00ffffff, 0, 1.0f, 1.0f);
-	tlVtx[3] = D3DTLVERTEX(D3DVECTOR(vp.dwWidth,   0,     0), 1, 0x00ffffff, 0, 1.0f, 0.0f);
+	tlVtx[0] = D3DTLVERTEX(D3DVECTOR_New(0,    vp.dwHeight,     0), 1, 0x00ffffff, 0, 0.0f, 1.0f);
+	tlVtx[1] = D3DTLVERTEX(D3DVECTOR_New(0,    0,     0), 1, 0x00ffffff, 0, 0.0f, 0.0f);
+	tlVtx[2] = D3DTLVERTEX(D3DVECTOR_New(vp.dwWidth,   vp.dwHeight,     0), 1, 0x00ffffff, 0, 1.0f, 1.0f);
+	tlVtx[3] = D3DTLVERTEX(D3DVECTOR_New(vp.dwWidth,   0,     0), 1, 0x00ffffff, 0, 1.0f, 0.0f);
 
 	static DWORD dwPrevTime = 0;
 	DWORD dwCurTime = timeGetTime();
@@ -14349,8 +14386,7 @@ HRESULT CMyD3DApplication::CheckDeviceCaps()
 //       for some minimum set of capabilities
 //---------------------------------------------------------------------------
 
-HRESULT CMyD3DApplication::ConfirmDevice( DDCAPS* pddDriverCaps,
-		D3DDEVICEDESC7* pd3dDeviceDesc )
+HRESULT CMyD3DApplication::ConfirmDevice( DDCAPS* pddDriverCaps )
 {
 	return S_OK;
 }
@@ -15687,7 +15723,7 @@ void CMyD3DApplication::RenderSky3()
 	GetFramework()->GetD3DDevice()->GetRenderState( D3DRENDERSTATE_DESTBLEND, &dwRenState[1] );
 
 	D3DVECTOR	vDrawPos;
-	vDrawPos = D3DVECTOR(g_pRoh->m_wx, pCMyApp->GetLandPtr()->GetHFHeight(g_pRoh->m_wx, g_pRoh->m_wz), g_pRoh->m_wz);
+	vDrawPos = D3DVECTOR_New(g_pRoh->m_wx, pCMyApp->GetLandPtr()->GetHFHeight(g_pRoh->m_wx, g_pRoh->m_wz), g_pRoh->m_wz);
 	float sphere_height = 500.0f;
 	float sphere_scale = 4000.0f;
 
@@ -16004,12 +16040,12 @@ void CMyD3DApplication::DrawDrvTestPickVex()
 	Width = 100;
 	Height = 100;
 
-	PickVex[0] = D3DVERTEX( D3DVECTOR( -Width, -Height, 0.0f ), D3DVECTOR(0, 0, -1), 0.0f, 1.0f );
-	PickVex[1] = D3DVERTEX( D3DVECTOR( -Width, Height, 0.0f ), D3DVECTOR(0, 0, -1), 0.0f, 0.0f );
-	PickVex[2] = D3DVERTEX( D3DVECTOR( Width, -Height, 0.0f ), D3DVECTOR(0, 0, -1), 1.0f, 1.0f );
-	PickVex[3] = D3DVERTEX( D3DVECTOR( Width, Height, 0.0f ), D3DVECTOR(0, 0, -1), 1.0f, 0.0f );
-	PickVex[4] = D3DVERTEX( D3DVECTOR( -Width, -Height, 0.0f ), D3DVECTOR(0, 0, 1), 0.0f, 1.0f );
-	PickVex[5] = D3DVERTEX( D3DVECTOR( -Width, Height, 0.0f ), D3DVECTOR(0, 0, 1), 0.0f, 0.0f );
+	PickVex[0] = D3DVERTEX( D3DVECTOR_New( -Width, -Height, 0.0f ), D3DVECTOR_New(0, 0, -1), 0.0f, 1.0f );
+	PickVex[1] = D3DVERTEX( D3DVECTOR_New( -Width, Height, 0.0f ), D3DVECTOR_New(0, 0, -1), 0.0f, 0.0f );
+	PickVex[2] = D3DVERTEX( D3DVECTOR_New( Width, -Height, 0.0f ), D3DVECTOR_New(0, 0, -1), 1.0f, 1.0f );
+	PickVex[3] = D3DVERTEX( D3DVECTOR_New( Width, Height, 0.0f ), D3DVECTOR_New(0, 0, -1), 1.0f, 0.0f );
+	PickVex[4] = D3DVERTEX( D3DVECTOR_New( -Width, -Height, 0.0f ), D3DVECTOR_New(0, 0, 1), 0.0f, 1.0f );
+	PickVex[5] = D3DVERTEX( D3DVECTOR_New( -Width, Height, 0.0f ), D3DVECTOR_New(0, 0, 1), 0.0f, 0.0f );
 
 	hicolor.Color = g_wIdx = 40307;
 
@@ -16184,10 +16220,10 @@ void CMyD3DApplication::PcBangUserDraw()
 	m_pd3dDevice->SetTextureStageState( 0, D3DTSS_ALPHAARG2, D3DTA_DIFFUSE );
 	m_pd3dDevice->SetTextureStageState( 0, D3DTSS_ALPHAOP,   D3DTOP_MODULATE );
 
-	m_rect[0] = D3DTLVERTEX( D3DVECTOR( 0.0f, 0.0f, 0.0f ), 1.0f, 0xffffffff, 0, 0.0f, 1.0f );
-	m_rect[1] = D3DTLVERTEX( D3DVECTOR( 0.0f, 0.0f, 0.0f ), 1.0f, 0xffffffff, 0, 0.0f, 0.0f );
-	m_rect[2] = D3DTLVERTEX( D3DVECTOR( 0.0f, 0.0f, 0.0f ), 1.0f, 0xffffffff, 0, 1.0f, 1.0f );
-	m_rect[3] = D3DTLVERTEX( D3DVECTOR( 0.0f, 0.0f, 0.0f ), 1.0f, 0xffffffff, 0, 1.0f, 0.0f );
+	m_rect[0] = D3DTLVERTEX( D3DVECTOR_New( 0.0f, 0.0f, 0.0f ), 1.0f, 0xffffffff, 0, 0.0f, 1.0f );
+	m_rect[1] = D3DTLVERTEX( D3DVECTOR_New( 0.0f, 0.0f, 0.0f ), 1.0f, 0xffffffff, 0, 0.0f, 0.0f );
+	m_rect[2] = D3DTLVERTEX( D3DVECTOR_New( 0.0f, 0.0f, 0.0f ), 1.0f, 0xffffffff, 0, 1.0f, 1.0f );
+	m_rect[3] = D3DTLVERTEX( D3DVECTOR_New( 0.0f, 0.0f, 0.0f ), 1.0f, 0xffffffff, 0, 1.0f, 0.0f );
 
 	int sizeX = 640;
 	int sizeY = 480;

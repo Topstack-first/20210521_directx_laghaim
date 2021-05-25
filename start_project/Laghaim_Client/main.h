@@ -19,6 +19,8 @@
 #include "FxRegenStart.h"
 #include "LHSingleton.h"
 
+#include "Conversion.h"
+
 #define WIN32_LEAN_AND_MEAN
 
 typedef enum { NKGRAPHIC2D, NKGRAPHIC3D, NKGRAPHICLOADING, NKGRAPHICGOWORLD } NKGRAPHIC_MODE;
@@ -177,7 +179,8 @@ protected:
 	HRESULT RestoreSurfaces();
 
 	// 디바이스 능력 확인 함수.
-	static HRESULT ConfirmDevice( DDCAPS* pddDriverCaps, D3DDEVICEDESC7* pd3dDeviceDesc );
+	///static HRESULT ConfirmDevice( DDCAPS* pddDriverCaps, D3DDEVICEDESC7* pd3dDeviceDesc );
+	static HRESULT ConfirmDevice(DDCAPS* pddDriverCaps);
 	HRESULT			CheckDeviceCaps();
 	BOOL			m_bCanDoMultitexture, m_bCanDoAddSigned, m_bCanDoModulate, m_bCanDoModulate2X;
 	BOOL			m_bCanDoAdd;
@@ -200,7 +203,7 @@ protected:
 	CPath			*m_pPath;
 	CFrustum		*m_pFrustum;	// 뷰 프러스텀
 	// 카메라가 보고 있는 곳 오브젝트.
-	D3DLVERTEX		m_Origin[8];
+	///D3D9Vertex		m_Origin[8];
 	WORD			m_idxOrigin[36];
 	// 한글 입력
 	CHanIme			*m_pHanIme;

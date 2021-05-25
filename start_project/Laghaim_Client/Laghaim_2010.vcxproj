@@ -886,6 +886,7 @@
     <ClInclude Include="ControlPopupMenu.h" />
     <ClInclude Include="ControlRoyale.h" />
     <ClInclude Include="ControlYutboard.h" />
+    <ClInclude Include="Conversion.h" />
     <ClInclude Include="CsyManager.h" />
     <ClInclude Include="DataFriend.h" />
     <ClInclude Include="DecardiBattleManager.h" />

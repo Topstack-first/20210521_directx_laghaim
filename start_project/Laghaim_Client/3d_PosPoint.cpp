@@ -4,7 +4,7 @@
 //----------------------------------------------------------------------
 #define D3D_OVERLOADS
 #include <math.h>
-#include <d3d.h>
+#include <d3d9.h>
 #include "sheet.h"
 #include "d3dutil.h"
 #include "3d_PosPoint.h"

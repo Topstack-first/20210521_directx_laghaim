@@ -52,6 +52,8 @@ typedef struct _D3DVECTOR {
     float x;
     float y;
     float z;
+
+    
 } D3DVECTOR;
 #define D3DVECTOR_DEFINED
 #endif

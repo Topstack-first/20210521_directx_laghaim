@@ -9,7 +9,8 @@
 #ifndef  D3DAPP_H
 #define  D3DAPP_H
 #define  D3D_OVERLOADS
-#include <d3d.h>
+#include <d3dx9.h>
+
 #include "D3DFrame.h"
 #include "D3DEnum.h"
 #include "D3DUtil.h"
@@ -50,14 +51,14 @@ protected:
 	//DWORD			m_dwWsStyle;
 	D3DEnum_DeviceInfo*  m_pDeviceInfo;
 	LPDIRECTDRAW7        m_pDD;
-	LPDIRECT3D7          m_pD3D;
-	LPDIRECT3DDEVICE7    m_pd3dDevice;
+	LPDIRECT3D9          m_pD3D;
+	LPDIRECT3DDEVICE9    m_pd3dDevice;
 	LPDIRECTDRAWSURFACE7 m_pddsRenderTarget;
 	LPDIRECTDRAWSURFACE7 m_pddsRenderTargetLeft; // For stereo modes
 	DDSURFACEDESC2       m_ddsdRenderTarget;
 
 	// pick buffer ¿ë
-	LPDIRECT3DDEVICE7    m_pd3dDevicePick;
+	LPDIRECT3DDEVICE9    m_pd3dDevicePick;
 	BOOL				 m_bRGB565;
 	BOOL				 m_bGameMode;
 
@@ -67,7 +68,8 @@ protected:
 	BOOL                 m_bAppUseStereo;
 	BOOL                 m_bShowStats;
 	BOOL				 m_bShowStats_Nalrim;
-	HRESULT              (*m_fnConfirmDevice)(DDCAPS*, D3DDEVICEDESC7*);
+	///HRESULT              (*m_fnConfirmDevice)(DDCAPS*, D3DDEVICEDESC7*);
+	HRESULT(*m_fnConfirmDevice)(DDCAPS*);
 	BOOL				 m_bWindowed;
 
 	// Overridable functions for the 3D scene created by the app
@@ -187,11 +189,11 @@ public:
 	{
 		m_bFrameMoving = val;
 	};
-	LPDIRECT3DDEVICE7    GetDevice()
+	LPDIRECT3DDEVICE9    GetDevice()
 	{
 		return m_pd3dDevice;
 	};
-	LPDIRECT3DDEVICE7    GetDevicePick()
+	LPDIRECT3DDEVICE9    GetDevicePick()
 	{
 		return m_pd3dDevicePick;
 	};
